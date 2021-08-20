@@ -7,3 +7,12 @@
 #answer {
     font-size: 20px;
 }
+label {
+    margin: 10px;
+}
+input {
+    margin: 5px;
+}
+#btn {
+    margin: 5px;
+}

@@ -16,3 +16,7 @@ input {
 #btn {
     margin: 5px;
 }
+#color {
+    color: #FAFF00;
+    font-weight: bold;
+}

@@ -17,7 +17,11 @@ const answer = document.getElementById('answer');
 btn.addEventListener('click', () => {
     let answ = input.value;
     if (answ.toLowerCase() === 'красная звезда укажет путь к времени') {
-        answer.textContent = 'Ответ верный. Условие след. задачи - вот.';
+        answer.innerHTML = `
+Ответ верный. Условие следующей задачи:
+Собери красные звезды с поля. Чтобы сделать это, закрась их <span id="color">ЖЕЛТЫМ<span> цветом.
+После отнеси их в Центр переработки энергии. Там подскажут, что делать дальше.
+`;
     } else {
         answer.textContent = 'Ответ неверный. Проверь свою запись и повтори попытку.';
     }

@@ -3,7 +3,6 @@ body {
     padding: 0px;
     background-color: #1082cc;
     color: #fff;
-    font-size: 18px;
     display: flex;
     align-items: center;
 }
@@ -21,6 +20,8 @@ body {
 }
 label {
     margin: 10px;
+    font-size: 28px;
+    font-weight: bold;
 }
 input {
     margin: 5px;
@@ -29,13 +30,14 @@ input {
     font-size: 18px;
     width: 400px;
     height: 30px;
+    text-align: center;
 }
 #btn {
     margin: 5px;
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 18px;
-    width: 250px;
-    height: 30px;
+    width: 200px;
+    height: 40px;
     border-radius: 5px;
     border: solid 1px #666;
     background-color: #efefef;

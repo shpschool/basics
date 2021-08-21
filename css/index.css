@@ -1,9 +1,19 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #1082cc;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
 #cont {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 100%;
     font-family: "Comic Sans MS", cursive, sans-serif;
+    margin-top: 20%;
 }
 #answer {
     font-size: 20px;
@@ -15,6 +25,7 @@ label {
 input {
     margin: 5px;
     font-family: "Comic Sans MS", cursive, sans-serif;
+    color: #1082cc;
 }
 #btn {
     margin: 5px;

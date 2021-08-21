@@ -3,6 +3,7 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 #answer {
     font-size: 20px;
@@ -13,9 +14,11 @@ label {
 }
 input {
     margin: 5px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 #btn {
     margin: 5px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 #color {
     color: #FAFF00;

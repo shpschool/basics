@@ -7,7 +7,6 @@ body.innerHTML = `
 <button id="btn">Отправить ответ</button>
 <div id="answer"></div>
 </div>
-<iframe src="https://scratch.mit.edu/projects/534588677/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
 `
 
 const input = document.getElementById('answer-input');

@@ -5,7 +5,6 @@ body.innerHTML = `
 <label>Введи полученную фразу:</label>
 <input id="answer-input">
 <button id="btn">Отправить ответ</button>
-<p></p>
 <div id="answer"></div>
 </div>
 `
@@ -25,6 +24,6 @@ btn.addEventListener('click', () => {
 После отнеси их в Центр переработки энергии. Там подскажут, что делать дальше.</p>
 `;
     } else {
-        answer.textContent = 'Ответ неверный. Проверь свою запись и повтори попытку.';
+        answer.textContent = '<p>Ответ неверный. Проверь свою запись и повтори попытку.</p>';
     }
 });

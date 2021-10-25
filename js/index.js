@@ -1,14 +1,3 @@
-const body = document.body;
-
-body.innerHTML = `
-<div id="cont">
-<label>Введи полученную фразу:</label>
-<input id="answer-input">
-<button id="btn">Отправить ответ</button>
-<div id="answer"></div>
-</div>
-`
-
 const input = document.getElementById('answer-input');
 const btn = document.getElementById('btn');
 const answer = document.getElementById('answer');

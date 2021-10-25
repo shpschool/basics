@@ -42,6 +42,7 @@ input {
     border: solid 1px #666;
     background-color: #efefef;
     color: #1082cc;
+    cursor: pointer;
 }
 #color {
     color: #FAFF00;

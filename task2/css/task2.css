@@ -1,0 +1,35 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #1082cc;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+#cont {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    margin-top: 10%;
+}
+#task {
+    font-size: 20px;
+    text-align: center;
+}
+.hidden {
+    display: none;
+}
+.btn {
+    margin: 5px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 18px;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: solid 1px #666;
+    background-color: #efefef;
+    color: #1082cc;
+    cursor: pointer;
+}

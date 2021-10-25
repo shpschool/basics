@@ -33,3 +33,6 @@ body {
     color: #1082cc;
     cursor: pointer;
 }
+img {
+    width: 300px;
+}

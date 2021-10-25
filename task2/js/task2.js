@@ -9,7 +9,7 @@ btn1.textContent = 'Готов!';
 btn2.textContent = 'Нет, отмена';
 
 const task2 = () => {
-    task.innerHTML = `<p>А это задание №2</p>`
+    task.innerHTML = `<p>А это задание №2</p><img src="captures/robot.png">`
     btn1.textContent = 'А здесь я ответил неверно!';
     btn2.textContent = 'А здесь ответил верно!';
 };

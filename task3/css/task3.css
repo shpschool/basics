@@ -1,6 +1,7 @@
 body {
     margin: 0px;
     padding: 0px;
+    padding-top: 10%;
     background-color: #212121;
     color: #ff9a00;
     display: flex;
@@ -12,7 +13,6 @@ body {
     flex-direction: column;
     width: 100%;
     font-family: "Comic Sans MS", cursive, sans-serif;
-    margin-top: 10%;
 }
 #prompt {
     font-size: 20px;
@@ -45,14 +45,14 @@ body {
     text-align: center;
 }
 #spider {
-    width: 300px;
+    width: 400px;
     position: fixed;
-    bottom: -50px;
-    right: -50px;
+    bottom: -100px;
+    right: -80px;
 }
 #pumpkin {
-    width: 150px;
+    width: 200px;
     position: fixed;
-    bottom: 10px;
-    left: 10px;
+    bottom: 20px;
+    left: 100px;
 }

@@ -80,7 +80,7 @@ btn.addEventListener('click', () => {
             prompt.innerHTML = `<h3>Анализ ДНК</h3>
                 <p>Для анализа ДНК нужна улика, содержащая частички преступника.
                 Напиши в поле ниже название улики, которую мы нашли при первом осмотре места преступления.</p>
-                <input id="ulika"><button id="btn2">Проверить улику</button>
+                <input id="ulika"><button id="btn3">Проверить улику</button>
                 <p id="answer" class="question"></p>`;
             const ulika = document.getElementById('ulika');
             const btn2 = document.getElementById('btn2');

@@ -51,8 +51,8 @@ body {
     right: -80px;
 }
 #pumpkin {
-    width: 200px;
+    width: 750px;
     position: fixed;
-    bottom: 20px;
-    left: 100px;
+    bottom: 0px;
+    left: 0px;
 }

@@ -17,15 +17,15 @@ const prompt2 = (src) => {
         <p>Посмотри на картинку и расшифруй анаграмму, чтобы получить подсказку.
         <br><span class="small"><strong>Примечание.</strong> Анаграмма - это новое "слово", полученное путем перестановки букв в исходном слове.
         <br>Тебе нужно получить иходное слово, чтобы понять подсказку.</span></p>
-        <img class="anagramma" src="captures/${src}">`;
+        <img class="wide-prompt" src="captures/${src}">`;
 };
 
 const prompt3 = (question, src) => {
     prompt.innerHTML = `<h3>Подсказка от призрака</h3>
-        <p>Ты задаешь призраку вопрос:</p>
-        <p class="question">${question}</p>
-        <p>Призрак ответил тебе при помощи спиритической доски.</p>
-        <img class="prompt-img" src="captures/${src}">`;
+        <p>Ты задаешь призраку вопрос:
+        <br><span class="question">${question}</span>
+        <br>Призрак ответил тебе при помощи спиритической доски.</p>
+        <img class="wide-prompt" src="captures/${src}">`;
 };
 
 btn.addEventListener('click', () => {

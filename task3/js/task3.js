@@ -83,13 +83,15 @@ btn.addEventListener('click', () => {
                 <input id="ulika"><button id="btn3">Проверить улику</button>
                 <p id="answer" class="question"></p>`;
             const ulika = document.getElementById('ulika');
-            const btn2 = document.getElementById('btn2');
+            const btn3 = document.getElementById('btn3');
             const answer = document.getElementById('answer');
 
-            btn2.addEventListener('click', () => {
+            btn3.addEventListener('click', () => {
                 if (ulika.value.toLowerCase() === "перчатка") {
                     answer.textContent = 'Преступник обнаружен. Его фамилия Джоватти.';
-                };
+                } else {
+                    answer.textContent = "Улика не найдена в базе. Проверь свою запись и повтори попытку."
+                }
             });
             break;
         default:

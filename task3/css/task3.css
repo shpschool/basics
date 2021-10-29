@@ -1,7 +1,7 @@
 body {
     margin: 0px;
     padding: 0px;
-    padding-top: 50%;
+    padding-top: 5%;
     background-color: #212121;
     color: #ff9a00;
     display: flex;
@@ -11,7 +11,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 600px;
+    width: 100%;
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
 .small {
@@ -21,6 +21,7 @@ body {
 #prompt {
     font-size: 20px;
     text-align: center;
+    width: 600px;
 }
 #btn, #bt2 {
     margin: 5px;

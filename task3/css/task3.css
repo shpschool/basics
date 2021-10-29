@@ -1,7 +1,7 @@
 body {
     margin: 0px;
     padding: 0px;
-    padding-top: 10%;
+    padding-top: 50%;
     background-color: #212121;
     color: #ff9a00;
     display: flex;
@@ -11,14 +11,18 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 100%;
+    width: 600px;
     font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.small {
+    font-size: 16px;
+    color: #efefef;
 }
 #prompt {
     font-size: 20px;
     text-align: center;
 }
-#btn {
+button {
     margin: 5px;
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 18px;
@@ -30,12 +34,19 @@ body {
     color: #efefef;
     cursor: pointer;
 }
-#prompt-img {
+.prompt-img {
     width: 300px;
     border-radius: 10px;
     border: solid 3px #ff9a00;
 }
-#code {
+.anagramma {
+    width: 600px;
+}
+.question {
+    color: #efefef;
+    font-size: 22px;
+}
+input {
     margin: 5px;
     font-family: "Comic Sans MS", cursive, sans-serif;
     color: #ff9a00;

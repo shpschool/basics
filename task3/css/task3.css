@@ -39,12 +39,10 @@ body {
     width: 300px;
     border-radius: 10px;
     border: solid 3px #ff9a00;
-    z-index: 1;
 }
 .wide-prompt {
     width: 600px;
-    margin-bottom: 50px;
-    z-index: 1;
+    margin-bottom: 70px;
 }
 .question {
     color: #efefef;
@@ -64,12 +62,10 @@ body {
     position: fixed;
     bottom: -100px;
     right: -80px;
-    z-index: 11;
 }
 #pumpkin {
     width: 500px;
     position: fixed;
     bottom: 0px;
     left: 0px;
-    z-index: 10;
 }

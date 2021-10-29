@@ -91,6 +91,7 @@ btn.addEventListener('click', () => {
                     answer.textContent = 'Преступник обнаружен. Его фамилия Джоватти.';
                 };
             });
+            break;
         default:
             wrongAnsw();
             break;

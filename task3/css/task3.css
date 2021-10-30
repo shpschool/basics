@@ -82,5 +82,6 @@ body {
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: #362222;
+    background-color: #B85C38;
+    /* #443737 */
 }

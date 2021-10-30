@@ -73,7 +73,7 @@ btn.addEventListener('click', () => {
             prompt3(question, '501726.png');
             break;
         case '602140':
-            question = 'КТО посмел украсть драгоценные тыквы?';
+            question = 'ГДЕ преступник спрятал драгоценные тыквы?';
             prompt3(question, '602140.png');
             break;
         case '603034':

@@ -77,10 +77,10 @@ body {
     width: 10px;
 }
 ::-webkit-scrollbar-track {
-    background-color: #31313111;
+    background-color: #31313131;
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: #ef4f0011;
+    background-color: #443737;
 }

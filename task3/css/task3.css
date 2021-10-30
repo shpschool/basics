@@ -21,7 +21,7 @@ body {
 #prompt {
     font-size: 20px;
     text-align: center;
-    width: 55%;
+    width: 50%;
     min-width: 300px;
 }
 #btn, #bt2, #btn3 {
@@ -42,7 +42,7 @@ body {
     border: solid 3px #ff9a00;
 }
 .wide-prompt {
-    width: 55%;
+    width: 50%;
     min-width: 300px;
     margin-bottom: 70px;
 }
@@ -67,8 +67,8 @@ body {
     right: -7%;
 }
 #pumpkin {
-    max-width: 500px;
-    width: 40%;
+    max-width: 400px;
+    width: 30%;
     position: fixed;
     bottom: 0px;
     left: 0px;

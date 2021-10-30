@@ -21,7 +21,8 @@ body {
 #prompt {
     font-size: 20px;
     text-align: center;
-    width: 600px;
+    width: 55%;
+    min-width: 300px;
 }
 #btn, #bt2, #btn3 {
     margin: 5px;
@@ -41,7 +42,8 @@ body {
     border: solid 3px #ff9a00;
 }
 .wide-prompt {
-    width: 600px;
+    width: 55%;
+    min-width: 300px;
     margin-bottom: 70px;
 }
 .question {
@@ -58,13 +60,15 @@ body {
     text-align: center;
 }
 #spider {
-    width: 400px;
+    max-width: 400px;
+    width: 30%;
     position: fixed;
     bottom: -100px;
     right: -80px;
 }
 #pumpkin {
-    width: 500px;
+    max-width: 500px;
+    width: 40%;
     position: fixed;
     bottom: 0px;
     left: 0px;

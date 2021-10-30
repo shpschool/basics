@@ -83,6 +83,6 @@ body {
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: #efefef7f;
+    background-color: #ff9a00;
     /* border: 1px solid rgb(226, 209, 220); */
 }

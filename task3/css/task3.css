@@ -94,7 +94,7 @@ body {
     }
     #btn, #bt2, #btn3 {
         font-size: 14px;
-        width: 180px;
+        width: 165px;
         min-height: 30px;
     }
     .question {
@@ -116,6 +116,6 @@ body {
         width: 5px;
     }
     h1 {
-        font-size: medium;
+        font-size: large;
     }
 }

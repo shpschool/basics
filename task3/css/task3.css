@@ -94,7 +94,7 @@ body {
     }
     #btn, #bt2, #btn3 {
         font-size: 14px;
-        width: 150px;
+        width: 180px;
         min-height: 30px;
     }
     .question {
@@ -114,5 +114,8 @@ body {
     }
     ::-webkit-scrollbar {
         width: 5px;
+    }
+    h1 {
+        font-size: medium;
     }
 }

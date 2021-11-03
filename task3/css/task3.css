@@ -12,6 +12,7 @@ body {
     align-items: center;
     flex-direction: column;
     width: 100%;
+    min-width: 400px;
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
 .small {

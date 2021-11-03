@@ -69,6 +69,7 @@ body {
 }
 #pumpkin {
     max-width: 400px;
+    min-width: 200px;
     width: 30%;
     position: fixed;
     bottom: 0px;

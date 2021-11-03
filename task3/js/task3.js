@@ -81,7 +81,7 @@ btn.addEventListener('click', () => {
                 <p>Для анализа ДНК нужна улика, содержащая частички преступника.
                 Напиши в поле ниже название улики, которую мы нашли при первом осмотре места преступления.</p>
                 <input id="ulika"><button id="btn3">Проверить улику</button>
-                <p id="answer" class="question"></p>`;
+                <p id="answer" class="question wide-prompt"></p>`;
             const ulika = document.getElementById('ulika');
             const btn3 = document.getElementById('btn3');
             const answer = document.getElementById('answer');

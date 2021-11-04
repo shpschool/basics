@@ -15,6 +15,8 @@ body {
     margin-top: 10%;
 }
 #task {
+    max-width: 60%;
+    min-width: 400px;
     font-size: 20px;
     text-align: center;
 }

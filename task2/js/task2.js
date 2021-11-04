@@ -12,9 +12,8 @@ task.innerHTML = `<p>Привет друг! Ты ты попал в страну
 btnAND.textContent = 'Готов!';
 btnOR.classList.add("hidden");
 
-const url = 'db/tasks.json';
 const loadTask = async () => {
-    let res = await fetch(url);
+    let res = await fetch('db/tasks.json');
     res = await res.json();
     if (ind < res.length) {
         task.innerHTML = res[ind].task;

@@ -1,0 +1,12 @@
+[
+    {
+        "task" : "Task 1: AND",
+        "AND" : 1,
+        "OR" : 0
+    },
+    {
+        "task" : "Task 2: OR",
+        "AND" : 0,
+        "OR" : 1
+    }
+]

@@ -12,7 +12,7 @@ body {
     flex-direction: column;
     width: 100%;
     font-family: "Comic Sans MS", cursive, sans-serif;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 #task {
     max-width: 60%;
@@ -39,4 +39,15 @@ body {
 }
 img {
     width: 300px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color: #1082ccbb;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #efefefbb;
 }

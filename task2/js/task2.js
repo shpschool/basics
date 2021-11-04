@@ -1,43 +1,45 @@
 const task = document.getElementById('task');
-const btn1 = document.getElementById('btn1');
-const btn2 = document.getElementById('btn2');
+const btnAND = document.getElementById('and');
+const btnOR = document.getElementById('or');
 const buttons = document.getElementById('buttons');
 let score = 0;
+let ind = 0;
 
-task.innerHTML = `<p>Привет друг! Ты готов повеселиться?</p>`
-btn1.textContent = 'Готов!';
-btn2.textContent = 'Нет, отмена';
+task.innerHTML = `<p>Привет друг! Ты ты попал в страну Повторяндию. Чтобы из нее выбраться, тебе нужно правильно выбрать, 
+                в каких случаях используется оператор AND, а в каких - OR.
+                <br>Читай задания и выбирай кнопку AND или OR, которая подходит в этом случае.
+                <br>Готов?</p>`;
+btnAND.textContent = 'Готов!';
+btnOR.classList.add("hidden");
 
-const task2 = () => {
-    task.innerHTML = `<p>А это задание №2</p><img src="captures/robot.png">`
-    btn1.textContent = 'А здесь я ответил неверно!';
-    btn2.textContent = 'А здесь ответил верно!';
+const url = 'https://raw.githubusercontent.com/iamgo100/task_shp/main/task2/db/tasks.json';
+const loadTask = async () => {
+    let res = await fetch(url);
+    res = await res.json();
+    if (ind < res.length) {
+        task.innerHTML = res[ind].task;
+        btnAND.dataset.score = res[ind].AND;
+        btnOR.dataset.score = res[ind].OR;
+        ind++;
+    } else {
+        task.innerHTML = `<p>А это КОНЕЦ!</p><p>За этот мини-квест ты получил(а) ${score} баллов!</p>`
+        buttons.classList.add('hidden');
+    };
 };
-const task3 = () => {
-    task.innerHTML = `<p>А это КОНЕЦ!</p><p>За этот мини-квест ты получил(а) ${score} баллов!</p>`
-    buttons.classList.add('hidden');
-};
 
-btn1.addEventListener('click', () => {
-    switch (btn1.textContent) {
-        case 'Готов!':
-            score += 1;
-            task2();
-            break
-        case 'А здесь я ответил неверно!':
-            task3();
-            break
-    }
+btnAND.addEventListener('click', () => {
+    if (btnAND.textContent === 'Готов!') {
+        loadTask(0);
+        btnAND.textContent = 'AND';
+        btnOR.textContent = 'OR';
+        btnOR.classList.remove("hidden");
+    } else {
+        score += Number(btnAND.dataset.score);
+        loadTask();
+    };
 });
 
-btn2.addEventListener('click', () => {
-    switch (btn2.textContent) {
-        case 'Нет, отмена':
-            task3();
-            break
-        case 'А здесь ответил верно!':
-            score += 1;
-            task3();
-            break
-    }
+btnOR.addEventListener('click', () => {
+    score += Number(btnOR.dataset.score);
+    loadTask();
 });

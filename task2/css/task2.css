@@ -25,7 +25,8 @@ body {
     margin: 5px;
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 18px;
-    width: 200px;
+    font-weight: bold;
+    width: 100px;
     min-height: 40px;
     border-radius: 5px;
     border: solid 1px #666;

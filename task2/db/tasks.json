@@ -1,11 +1,11 @@
 [
     {
-        "task" : "Task 1: AND",
+        "task" : "<p>Task 1: AND</p>",
         "AND" : 1,
         "OR" : 0
     },
     {
-        "task" : "Task 2: OR",
+        "task" : "<p>Task 2: OR</p>",
         "AND" : 0,
         "OR" : 1
     }

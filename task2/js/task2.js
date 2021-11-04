@@ -12,7 +12,7 @@ task.innerHTML = `<p>Привет друг! Ты ты попал в страну
 btnAND.textContent = 'Готов!';
 btnOR.classList.add("hidden");
 
-const url = 'https://raw.githubusercontent.com/iamgo100/task_shp/main/task2/db/tasks.json';
+const url = 'db/tasks.json';
 const loadTask = async () => {
     let res = await fetch(url);
     res = await res.json();

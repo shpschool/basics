@@ -15,7 +15,7 @@ btnOR.classList.add("hidden");
 const loadTask = async () => {
     let res = await fetch('db/tasks.json');
     res = await res.json();
-    console.log(res);
+    console.log(res[ind].task);
     if (ind < res.length) {
         task.innerHTML = res[ind].task;
         btnAND.dataset.score = res[ind].AND;

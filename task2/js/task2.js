@@ -15,6 +15,7 @@ btnAND.classList.add("hidden");
 btnOR.classList.add("hidden");
 
 const loadTask = async () => {
+    console.log(ind);
     let res = await fetch('db/tasks.json');
     res = await res.json();
     if (ind < res.length) {
@@ -22,9 +23,11 @@ const loadTask = async () => {
         btnAND.dataset.score = res[ind].AND;
         btnOR.dataset.score = res[ind].OR;
         ind++;
+        console.log(ind);
     } else {
         task.innerHTML = `<p>А это КОНЕЦ!</p><p>За этот мини-квест ты получил(а) ${score} баллов!</p>`
         buttons.classList.add('hidden');
+        console.log(ind);
     };
 };
 

@@ -15,13 +15,12 @@ btnAND.classList.add("hidden");
 btnOR.classList.add("hidden");
 
 btnNext.addEventListener('click', async () => {
-    let res = await fetch('db/tasks.json');
+    let res = await fetch('https://raw.githubusercontent.com/iamgo100/task_shp/main/task2/db/tasks.json');
     res = await res.json();
     if (ind < res.length) {
         task.innerHTML = res[ind].task;
         btnAND.dataset.score = res[ind].AND;
         btnOR.dataset.score = res[ind].OR;
-        ind++;
         btnNext.classList.add("hidden");
         btnAND.classList.remove("hidden");
         btnOR.classList.remove("hidden");
@@ -33,7 +32,7 @@ btnNext.addEventListener('click', async () => {
 });
 
 const checking = async (answer) => {
-    let res = await fetch('db/tasks.json');
+    let res = await fetch('https://raw.githubusercontent.com/iamgo100/task_shp/main/task2/db/tasks.json');
     res = await res.json();
     if (answer) {
         task.innerHTML = res[ind].right;
@@ -41,6 +40,7 @@ const checking = async (answer) => {
     } else {
         task.innerHTML = res[ind].wrong;
     };
+    ind++;
     btnNext.classList.remove("hidden");
     btnAND.classList.add("hidden");
     btnOR.classList.add("hidden");

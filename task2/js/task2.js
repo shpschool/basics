@@ -14,8 +14,7 @@ btnNext.textContent = 'Готов!';
 btnAND.classList.add("hidden");
 btnOR.classList.add("hidden");
 
-const loadTask = async () => {
-    console.log(ind);
+btnNext.addEventListener('click', async () => {
     let res = await fetch('db/tasks.json');
     res = await res.json();
     if (ind < res.length) {
@@ -23,13 +22,15 @@ const loadTask = async () => {
         btnAND.dataset.score = res[ind].AND;
         btnOR.dataset.score = res[ind].OR;
         ind++;
-        console.log(ind);
+        btnNext.classList.add("hidden");
+        btnAND.classList.remove("hidden");
+        btnOR.classList.remove("hidden");
+        if (btnNext.textContent === "Готов!") btnNext.textContent = "Дальше";
     } else {
         task.innerHTML = `<p>А это КОНЕЦ!</p><p>За этот мини-квест ты получил(а) ${score} баллов!</p>`
         buttons.classList.add('hidden');
-        console.log(ind);
     };
-};
+});
 
 const checking = async (answer) => {
     let res = await fetch('db/tasks.json');
@@ -44,14 +45,6 @@ const checking = async (answer) => {
     btnAND.classList.add("hidden");
     btnOR.classList.add("hidden");
 };
-
-btnNext.addEventListener('click', () => {
-    loadTask();
-    btnNext.classList.add("hidden");
-    btnAND.classList.remove("hidden");
-    btnOR.classList.remove("hidden");
-    if (btnNext.textContent === "Готов!") btnNext.textContent = "Дальше";
-});
 
 btnAND.addEventListener('click', () => {
     checking(Number(btnAND.dataset.score));

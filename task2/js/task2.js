@@ -15,7 +15,7 @@ btnAND.classList.add("hidden");
 btnOR.classList.add("hidden");
 
 btnNext.addEventListener('click', async () => {
-    let res = await fetch('https://raw.githubusercontent.com/iamgo100/task_shp/main/task2/db/tasks.json');
+    let res = await fetch('db/tasks.json');
     res = await res.json();
     if (ind < res.length) {
         task.innerHTML = res[ind].task;
@@ -32,7 +32,7 @@ btnNext.addEventListener('click', async () => {
 });
 
 const checking = async (answer) => {
-    let res = await fetch('https://raw.githubusercontent.com/iamgo100/task_shp/main/task2/db/tasks.json');
+    let res = await fetch('db/tasks.json');
     res = await res.json();
     if (answer) {
         task.innerHTML = res[ind].right;

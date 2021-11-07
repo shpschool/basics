@@ -1,6 +1,7 @@
 const task = document.getElementById('task');
 const btnAND = document.getElementById('and');
 const btnOR = document.getElementById('or');
+const btnNext = document.getElementById('next');
 const buttons = document.getElementById('buttons');
 let score = 0;
 let ind = 0;
@@ -9,7 +10,8 @@ task.innerHTML = `<p>Привет друг! Ты ты попал в страну
                 в каких случаях используется оператор AND, а в каких - OR.</p>
                 <p>Читай задания и выбирай кнопку AND или OR, которая подходит в этом случае.</p>
                 <p><strong>Готов?</strong></p>`;
-btnAND.textContent = 'Готов!';
+btnNext.textContent = 'Готов!';
+btnAND.classList.add("hidden");
 btnOR.classList.add("hidden");
 
 const loadTask = async () => {
@@ -26,19 +28,32 @@ const loadTask = async () => {
     };
 };
 
-btnAND.addEventListener('click', () => {
-    if (btnAND.textContent === 'Готов!') {
-        loadTask(0);
-        btnAND.textContent = 'AND';
-        btnOR.textContent = 'OR';
-        btnOR.classList.remove("hidden");
+const checking = async (answer) => {
+    let res = await fetch('db/tasks.json');
+    res = await res.json();
+    if (answer) {
+        task.innerHTML = res[ind].right;
+        score += 1
     } else {
-        score += Number(btnAND.dataset.score);
-        loadTask();
+        task.innerHTML = res[ind].wrong;
     };
+    btnNext.classList.remove("hidden");
+    btnAND.classList.add("hidden");
+    btnOR.classList.add("hidden");
+};
+
+btnNext.addEventListener('click', () => {
+    loadTask();
+    btnNext.classList.add("hidden");
+    btnAND.classList.remove("hidden");
+    btnOR.classList.remove("hidden");
+    if (btnNext.textContent === "Готов!") btnNext.textContent = "Дальше";
+});
+
+btnAND.addEventListener('click', () => {
+    checking(Number(btnAND.dataset.score));
 });
 
 btnOR.addEventListener('click', () => {
-    score += Number(btnOR.dataset.score);
-    loadTask();
+    checking(Number(btnOR.dataset.score));
 });

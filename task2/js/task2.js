@@ -26,7 +26,7 @@ btnNext.addEventListener('click', async () => {
         btnOR.classList.remove("hidden");
         if (btnNext.textContent === "Готов!") btnNext.textContent = "Дальше";
     } else {
-        task.innerHTML = `<p>А это КОНЕЦ!</p><p>За этот мини-квест ты получил(а) ${score} баллов!</p>`
+        task.innerHTML = `<h1>А это КОНЕЦ!</h1> <p>Ты все-таки выбрался из страны Повторяндии. Путь был долгий и не простой, но ты справился!</p><p>За этот мини-квест ты получил(а) ${score} баллов!</p>`
         buttons.classList.add('hidden');
     };
 });

@@ -60,6 +60,7 @@ img {
 }
 #images {
     padding: 5px 10px;
+    margin-bottom: 30px;
     max-width: 60%;
     min-width: 400px;
     display: flex;

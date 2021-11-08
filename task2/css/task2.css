@@ -56,13 +56,14 @@ img {
     color: #c7e7ff;
 }
 #images {
-    padding: 5px 10px;
+    padding: 10px;
     margin-bottom: 30px;
     max-width: 60%;
     min-width: 400px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #1052cc77;
 }
 .hidden {
     display: none !important;

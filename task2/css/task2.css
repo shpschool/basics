@@ -13,6 +13,7 @@ body {
     width: 100%;
     font-family: "Comic Sans MS", cursive, sans-serif;
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 #task {
     max-width: 60%;

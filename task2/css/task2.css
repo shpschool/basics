@@ -65,8 +65,5 @@ img {
     justify-content: space-between;
 }
 .hidden {
-    display: none;
-}
-.show {
-    display: flex;
+    display: none !important;
 }

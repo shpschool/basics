@@ -27,13 +27,13 @@ btnNext.addEventListener('click', async () => {
         btnOR.classList.remove("hidden");
         if (res[ind].images) {
             images.innerHTML = res[ind].images;
-            images.classList.add('show');
+            images.classList.remove('hidden');
         };
         if (btnNext.textContent === "Готов!") btnNext.textContent = "Дальше";
     } else {
         task.innerHTML = `<h1>А это КОНЕЦ!</h1> <p>Ты все-таки выбрался из страны Повторяндии. Путь был долгий и не простой, но ты справился!</p><p>За этот мини-квест ты получил(а) ${score} баллов!</p>`
         buttons.classList.add('hidden');
-        images.classList.remove('show');
+        images.classList.add('hidden');
     };
 });
 
@@ -50,7 +50,7 @@ const checking = async (answer) => {
     btnNext.classList.remove("hidden");
     btnAND.classList.add("hidden");
     btnOR.classList.add("hidden");
-    images.classList.remove('show');
+    images.classList.add('hidden');
 };
 
 btnAND.addEventListener('click', () => {

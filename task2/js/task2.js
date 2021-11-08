@@ -30,6 +30,7 @@ btnNext.addEventListener('click', async () => {
     } else {
         task.innerHTML = `<h1>А это КОНЕЦ!</h1> <p>Ты все-таки выбрался из страны Повторяндии. Путь был долгий и не простой, но ты справился!</p><p>За этот мини-квест ты получил(а) ${score} баллов!</p>`
         buttons.classList.add('hidden');
+        images.classList.add('hidden');
     };
 });
 

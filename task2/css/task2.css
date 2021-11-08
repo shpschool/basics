@@ -13,7 +13,7 @@ body {
     width: 100%;
     font-family: "Comic Sans MS", cursive, sans-serif;
     margin-top: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
 }
 #task {
     max-width: 60%;
@@ -39,9 +39,9 @@ body {
     cursor: pointer;
 }
 img {
-    width: 70%;
+    width: 45%;
     max-width: 500px;
-    min-width: 300px;
+    min-width: 200px;
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -57,4 +57,12 @@ img {
 .note {
     font-size: 16px;
     color: #c7e7ff;
+}
+#images {
+    padding: 5px 10px;
+    max-width: 60%;
+    min-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

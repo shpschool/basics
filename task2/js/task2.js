@@ -1,3 +1,4 @@
+const images = document.getElementById('images');
 const task = document.getElementById('task');
 const btnAND = document.getElementById('and');
 const btnOR = document.getElementById('or');
@@ -18,6 +19,7 @@ btnNext.addEventListener('click', async () => {
     let res = await fetch('db/tasks.json');
     res = await res.json();
     if (ind < res.length) {
+        images.innerHTML = res[ind].images;
         task.innerHTML = res[ind].task;
         btnAND.dataset.score = res[ind].AND;
         btnOR.dataset.score = res[ind].OR;

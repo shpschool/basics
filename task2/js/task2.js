@@ -19,19 +19,21 @@ btnNext.addEventListener('click', async () => {
     let res = await fetch('db/tasks.json');
     res = await res.json();
     if (ind < res.length) {
-        images.innerHTML = res[ind].images;
         task.innerHTML = res[ind].task;
         btnAND.dataset.score = res[ind].AND;
         btnOR.dataset.score = res[ind].OR;
         btnNext.classList.add("hidden");
         btnAND.classList.remove("hidden");
         btnOR.classList.remove("hidden");
-        images.classList.remove('hidden');
+        if (res[ind].images) {
+            images.innerHTML = res[ind].images;
+            images.classList.add('show');
+        };
         if (btnNext.textContent === "Готов!") btnNext.textContent = "Дальше";
     } else {
         task.innerHTML = `<h1>А это КОНЕЦ!</h1> <p>Ты все-таки выбрался из страны Повторяндии. Путь был долгий и не простой, но ты справился!</p><p>За этот мини-квест ты получил(а) ${score} баллов!</p>`
         buttons.classList.add('hidden');
-        images.classList.add('hidden');
+        images.classList.remove('show');
     };
 });
 
@@ -48,7 +50,7 @@ const checking = async (answer) => {
     btnNext.classList.remove("hidden");
     btnAND.classList.add("hidden");
     btnOR.classList.add("hidden");
-    images.classList.add('hidden');
+    images.classList.remove('show');
 };
 
 btnAND.addEventListener('click', () => {

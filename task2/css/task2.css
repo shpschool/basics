@@ -38,7 +38,7 @@ body {
     cursor: pointer;
 }
 img {
-    width: 300px;
+    min-width: 300px;
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -50,4 +50,7 @@ img {
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: #efefefbb;
+}
+.note {
+    font-size: 16px;
 }

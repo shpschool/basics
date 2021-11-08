@@ -38,7 +38,8 @@ body {
     cursor: pointer;
 }
 img {
-    max-width: 600px;
+    width: 70%;
+    max-width: 500px;
     min-width: 300px;
 }
 ::-webkit-scrollbar {
@@ -54,5 +55,5 @@ img {
 }
 .note {
     font-size: 16px;
-    color: #7dc5fc;
+    color: #c7e7ff;
 }

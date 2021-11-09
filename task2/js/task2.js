@@ -23,13 +23,11 @@ btnNext.addEventListener('click', async () => {
         task.innerHTML = res[ind].task;
         btnAND.dataset.score = res[ind].AND;
         btnOR.dataset.score = res[ind].OR;
+        images.innerHTML = res[ind].images;
         btnNext.classList.add("hidden");
         btnAND.classList.remove("hidden");
         btnOR.classList.remove("hidden");
-        if (res[ind].images) {
-            images.innerHTML = res[ind].images;
-            images.classList.remove('hidden');
-        };
+        images.classList.remove('hidden');
         if (btnNext.textContent === "Готов!") btnNext.textContent = "Дальше";
     } else {
         task.innerHTML = `<h1>А это КОНЕЦ!</h1> <p>Ты все-таки выбрался из страны Повторяндии. Путь был долгий и не простой, но ты справился!</p><p>За этот мини-квест ты получил(а) ${score} баллов!</p>`

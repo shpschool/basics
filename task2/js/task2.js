@@ -14,6 +14,7 @@ task.innerHTML = `<p>Привет друг! Ты ты попал в страну
 btnNext.textContent = 'Готов!';
 btnAND.classList.add("hidden");
 btnOR.classList.add("hidden");
+images.classList.add("hidden");
 
 btnNext.addEventListener('click', async () => {
     let res = await fetch('db/tasks.json');

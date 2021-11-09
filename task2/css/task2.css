@@ -110,5 +110,6 @@ img {
         margin: 10px;
         height: 100px;
         min-width: 67px;
+        width: 67px !important;
     }
 }

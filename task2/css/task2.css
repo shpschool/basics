@@ -37,7 +37,6 @@ body {
 }
 img {
     margin: 0px 10px;
-    width: 45%;
     max-width: 500px;
     min-width: 200px;
 }
@@ -59,7 +58,7 @@ img {
 #images {
     padding: 10px 20px;
     margin-bottom: 30px;
-    max-width: 60%;
+    max-width: 90%;
     min-width: 400px;
     display: flex;
     align-items: center;

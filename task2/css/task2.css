@@ -11,7 +11,7 @@ body {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Comic Sans MS", sans-serif;
     margin-top: 5%;
     margin-bottom: 10%;
 }
@@ -24,7 +24,7 @@ body {
 }
 .btn {
     margin: 5px;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Comic Sans MS", sans-serif;
     font-size: 18px;
     font-weight: bold;
     width: 100px;
@@ -82,6 +82,7 @@ img {
         margin: 20px 0px;
         max-width: 300px;
         min-width: 150px;
+        width: 90% !important;
     }
     ::-webkit-scrollbar {
         width: 5px;

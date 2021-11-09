@@ -38,7 +38,7 @@ body {
 #cover {
     margin: 10px;
     height: 200px;
-    width: 135px !important;
+    min-width: 135px;
 }
 img {
     margin: 0px 20px;
@@ -109,6 +109,6 @@ img {
     #cover {
         margin: 10px;
         height: 100px;
-        width: 67px !important;
+        min-width: 67px;
     }
 }

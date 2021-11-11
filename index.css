@@ -1,0 +1,26 @@
+body {
+    margin: 0px;
+    padding: 5% 0px;
+    background-color: #1082cc;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-family: "Comic Sans MS", sans-serif;
+}
+button {
+    margin: 5px;
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100px;
+    min-height: 40px;
+    border-radius: 5px;
+    border: solid 1px #666;
+    background-color: #efefef;
+    color: #1082cc;
+    cursor: pointer;
+}
+h1 {
+    text-align: center;
+    width: 100%;
+}

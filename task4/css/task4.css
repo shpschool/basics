@@ -1,0 +1,38 @@
+body {
+    margin: 0px;
+    padding: 5% 0px;
+    background-color: #1082cc;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Comic Sans MS", sans-serif;
+}
+/* button {
+    margin: 5px;
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    width: 150px;
+    min-height: 40px;
+    border-radius: 5px;
+    border: solid 1px #666;
+    background-color: #efefef;
+    color: #1082cc;
+    cursor: pointer;
+} */
+h1 {
+    text-align: center;
+    width: 100%;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color: #1052cc77;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #efefefbb;
+}

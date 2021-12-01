@@ -5,12 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='css/task4.css'>
+    <link rel='stylesheet' href='css/mobile.css'>
+    <link rel='stylesheet' href='css/classes.css'>
     <title>Монстрическое приключение</title>
 </head>
 <body>
-    <div class="cont">
+    <div class="cont" id="main">
         <h1>Монстрическое приключение</h1>
-        <div id="task" class="cont"></div>
+        <div class="inline-cont wrap100" id="start">
+            <div class="cont wrap35">
+                <h3>Правила</h3>
+                <ol>
+                    <li>Выбери своего героя и нажми на его изображение</li>
+                    <li>Введи в открывшееся поле код, чтобы получить суперсилу или предмет</li>
+                    <li>После нажми на Enter, чтобы увидеть сколько мощности в данной силе или данном предмете, а также чтобы прочитать описание силы или предмета</li>
+                    <li>Затем нажми на кнопку "Использовать силу/предмет", чтобы увидеть результат твоей работы</li>
+                </ol>
+            </div>
+            <div class="cont wrap60">
+                <h3>Прочность ловушки: <span id="strenght-text">1000</span></h3>
+                <progress value="1000" max="1000" id="strenght" class="strong wrap90"></progress>
+                <div id="scene" class="inline-cont wrap90"></div>
+            </div>
+        </div>
+        <div class="inline-cont wrap100 hidden">
+            <div class="wrap60 cont" id="description"></div>
+            <div class="wrap35 cont" id="using-power">
+                <div class="inline-cont wrap100">
+                    <label>Мощность:</label>
+                    <progress value="0" max="100" id="power"></progress>
+                </div>
+                <button id="btn">Использовать силу/предмет</button>
+            </div>
+        </div>
+        <div class="inline-cont wrap100">
+            <div class="cont hero">
+                <input type="image" src="captures/hero1.png" id="hero1">
+                <input id="code1" class="text">
+            </div>
+            <div class="cont hero">
+                <input type="image" src="captures/hero2.png" id="hero2">
+                <input id="code2" class="text">
+            </div>
+            <div class="cont hero">
+                <input type="image" src="captures/hero3.png" id="hero3">
+                <input id="code3" class="text">
+            </div>
+            <div class="cont hero">
+                <input type="image" src="captures/hero4.png" id="hero4">
+                <input id="code4" class="text">
+            </div>
+        </div>
     </div>
     <script src="js/task4.js"></script>
 </body>

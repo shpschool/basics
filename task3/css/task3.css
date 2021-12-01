@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     width: 100%;
     min-width: 400px;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Comic Sans MS", sans-serif;
 }
 .small {
     font-size: 16px;
@@ -27,7 +27,7 @@ body {
 }
 #btn, #bt2, #btn3 {
     margin: 5px;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Comic Sans MS", sans-serif;
     font-size: 18px;
     width: 200px;
     min-height: 40px;
@@ -53,7 +53,7 @@ body {
 }
 #code, #ulika {
     margin: 5px;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Comic Sans MS", sans-serif;
     color: #ff9a00;
     font-size: 18px;
     width: 200px;

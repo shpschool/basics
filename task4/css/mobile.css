@@ -2,6 +2,18 @@
     #main {
         width: 90%;
     }
+    h1 {font-size: 26px;}
+    h3 {font-size: 18px;}
+    ol {font-size: 14px;}
+    label {font-size: 14px;}
+    #description {font-size: 16px;}
+    input[type="image"] {
+        max-height: 180px;
+    }
+    #btn {
+        min-height: 30px;
+        font-size: 14px;
+    }
     ::-webkit-scrollbar {
         width: 7px;
     }

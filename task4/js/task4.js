@@ -1,8 +1,11 @@
 const scene = document.getElementById('scene');
 const progress1 = document.getElementById('strenght');
 const progress2 = document.getElementById('power');
+const powerCont = document.getElementById('using-power');
 const btn = document.getElementById('btn');
 const descr = document.getElementById('description');
+const herous = document.querySelectorAll('.hero');
+const codes = document.querySelectorAll('.text')
 
 const changeProgressStyle = (el) => {
     if (el.value > 0) {
@@ -22,13 +25,41 @@ const changeProgressStyle = (el) => {
     };
 };
 
-descr.innerHTML = '<p>Это первое описание какой-либо силы</p>';
-progress2.value = 27;
-changeProgressStyle(progress2);
+const showPower = async (heroInd, code) => {
+    // let res = await fetch('db/codes.json');
+    // res = await res.json();
+    // console.log(res);
+    description = '<p>Введи код для выбранного героя, чтобы увидеть описание силы</p>';
+    descr.innerHTML = description;
+    progress2.value = 30;
+    changeProgressStyle(progress2);
+};
 
+const hideCodes = () => {
+    codes.forEach((el) => {
+        el.classList.add('hidden');
+        el.value = null;
+    });
+}
+
+hideCodes();
 scene.innerHTML = '<img src="captures/hero0.png" id="hero0">';
+descr.innerHTML = '<p>Введи код для выбранного героя, чтобы увидеть описание силы</p>';
+
+herous.forEach((el, ind) => {
+    const hero = el.children[1];
+    const code = el.children[2];
+    hero.addEventListener('click', () => {
+        hideCodes();
+        code.classList.remove('hidden')
+    });
+    code.addEventListener('change', () => {
+        showPower(ind, code.value);
+    });
+});
 
 btn.addEventListener('click', () => {
     progress1.value -= progress2.value;
-    changeProgressStyle(progress1)
+    changeProgressStyle(progress1);
+    hideCodes();
 });

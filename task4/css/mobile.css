@@ -5,10 +5,8 @@
     ol {font-size: 14px;}
     label {font-size: 14px;}
     #description {font-size: 16px;}
-    input[type="image"] {
-        max-height: 180px;
-        max-width: 80%;
-    }
+    p.name {font-size: 16px;}
+    input[type="image"] {max-height: 150px;}
     #start-pc {display: none;}
     #start-mobile {display: flex;}
     #with-power-pc {display: none;}

@@ -43,9 +43,7 @@ progress {
     height: 20px;
     border: 1px solid #666;
 }
-input[type="image"] {
-    max-height: 200px;
-}
+input[type="image"] {max-height: 200px;}
 #btn {
     margin: 5px;
     font-family: "Comic Sans MS", sans-serif;
@@ -58,22 +56,16 @@ input[type="image"] {
     color: #1082cc;
     cursor: pointer;
 }
-#main {
-    width: 800px;
-}
-#start {
-    align-items: flex-start;
-}
-#scene {
-    margin-top: 20px;
-}
+#main {width: 800px;}
+#start-pc {align-items: flex-start;}
+#start-mobile {display: none;}
+#with-power-mobile {display: none;}
+#scene {margin-top: 20px;}
 #power {
     width: 70%;
     max-width: 180px;
 }
-#description {
-    font-size: 20px;
-}
+#description {font-size: 20px;}
 #hero0 {
     max-height: 200px;
     max-width: 50%;

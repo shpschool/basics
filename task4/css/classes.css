@@ -29,32 +29,20 @@
     margin: 5px 0px;
     padding: 0px;
 }
-.wrap35 {
-    width: 35%;
-}
-.wrap60 {
-    width: 60%;
-}
-.wrap90 {
-    width: 90%;
-}
-.wrap100 {
-    width: 100%;
-}
 .hero {
     margin-bottom: 20px;
     width: 25%
 }
-.hidden {
-    display: none;
-}
+.wrap35 {width: 35%;}
+.wrap60 {width: 60%;}
+.wrap90 {width: 90%;}
+.wrap100 {width: 100%;}
+.hidden {display: none;}
 progress::-webkit-progress-bar {
     background-color: #efefef;
     border-radius: 10px;
 }
-progress::-webkit-progress-value {
-    border-radius: 10px;
-}
+progress::-webkit-progress-value {border-radius: 10px;}
 .pure::-webkit-progress-value {
     background-image: linear-gradient(#ff6600, #ff0000);
 }
@@ -64,9 +52,7 @@ progress::-webkit-progress-value {
 .strong::-webkit-progress-value {
     background-image: linear-gradient(#48ff00, #00b828);
 }
-::-webkit-scrollbar {
-    width: 10px;
-}
+::-webkit-scrollbar {width: 10px;}
 ::-webkit-scrollbar-track {
     background-color: #1052cc77;
     border-radius: 10px;

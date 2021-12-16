@@ -1,1 +1,556 @@
-{}
+[
+    {
+        "code": "200893",
+        "level": 1,
+        "hero": 0,
+        "power": 0,
+        "img": "",
+        "description": "ВСЕ СРАБОТАЛО!!!",
+        "used": false
+    },
+    {
+        "code": "823766",
+        "level": 1,
+        "hero": 0,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "99405897",
+        "level": 1,
+        "hero": 0,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "693587",
+        "level": 1,
+        "hero": 1,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "638439",
+        "level": 1,
+        "hero": 1,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "18774046",
+        "level": 1,
+        "hero": 1,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "428693",
+        "level": 1,
+        "hero": 2,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "101394",
+        "level": 1,
+        "hero": 2,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "18822035",
+        "level": 1,
+        "hero": 2,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "065021",
+        "level": 1,
+        "hero": 3,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "817932",
+        "level": 1,
+        "hero": 3,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "45931420",
+        "level": 1,
+        "hero": 3,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+
+
+
+
+
+
+
+    {
+        "code": "302957",
+        "level": 2,
+        "hero": 0,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "004074",
+        "level": 2,
+        "hero": 0,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "374046",
+        "level": 2,
+        "hero": 0,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "04104446",
+        "level": 2,
+        "hero": 0,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "910962",
+        "level": 2,
+        "hero": 0,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "49057646",
+        "level": 2,
+        "hero": 0,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "68758961",
+        "level": 2,
+        "hero": 0,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "885788",
+        "level": 2,
+        "hero": 1,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "788325",
+        "level": 2,
+        "hero": 1,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "230201",
+        "level": 2,
+        "hero": 1,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "42670659",
+        "level": 2,
+        "hero": 1,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "440954",
+        "level": 2,
+        "hero": 1,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "17764027",
+        "level": 2,
+        "hero": 1,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "74217257",
+        "level": 2,
+        "hero": 1,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "229369",
+        "level": 2,
+        "hero": 2,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "578924",
+        "level": 2,
+        "hero": 2,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "950201",
+        "level": 2,
+        "hero": 2,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "55316900",
+        "level": 2,
+        "hero": 2,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "851213",
+        "level": 2,
+        "hero": 2,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "40047139",
+        "level": 2,
+        "hero": 2,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "32052831",
+        "level": 2,
+        "hero": 2,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "491384",
+        "level": 2,
+        "hero": 3,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "075060",
+        "level": 2,
+        "hero": 3,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "288349",
+        "level": 2,
+        "hero": 3,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "06173959",
+        "level": 2,
+        "hero": 3,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "246153",
+        "level": 2,
+        "hero": 3,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "44814916",
+        "level": 2,
+        "hero": 3,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "27715162",
+        "level": 2,
+        "hero": 3,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+
+
+
+
+
+
+
+    {
+        "code": "032281",
+        "level": 3,
+        "hero": 0,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "169274",
+        "level": 3,
+        "hero": 0,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "89451265",
+        "level": 3,
+        "hero": 0,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "593070",
+        "level": 3,
+        "hero": 0,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "795044",
+        "level": 3,
+        "hero": 0,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "764163",
+        "level": 3,
+        "hero": 1,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "082142",
+        "level": 3,
+        "hero": 1,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "00751983",
+        "level": 3,
+        "hero": 1,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "885004",
+        "level": 3,
+        "hero": 1,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "850770",
+        "level": 3,
+        "hero": 1,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "436264",
+        "level": 3,
+        "hero": 2,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "029326",
+        "level": 3,
+        "hero": 2,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "06831049",
+        "level": 3,
+        "hero": 2,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "665850",
+        "level": 3,
+        "hero": 2,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "309349",
+        "level": 3,
+        "hero": 2,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "949259",
+        "level": 3,
+        "hero": 3,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "305960",
+        "level": 3,
+        "hero": 3,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "95868936",
+        "level": 3,
+        "hero": 3,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "753477",
+        "level": 3,
+        "hero": 3,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    },
+    {
+        "code": "680832",
+        "level": 3,
+        "hero": 3,
+        "power": 0,
+        "img": "",
+        "description": "",
+        "used": false
+    }
+]

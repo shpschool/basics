@@ -5,8 +5,7 @@
         "hero": 0,
         "power": 30,
         "img": "",
-        "description": "ВСЕ СРАБОТАЛО!!!",
-        "used": false
+        "description": "ВСЕ СРАБОТАЛО!!!"
     },
     {
         "code": "823766",
@@ -14,8 +13,7 @@
         "hero": 0,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "99405897",
@@ -23,8 +21,7 @@
         "hero": 0,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "693587",
@@ -32,8 +29,7 @@
         "hero": 1,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "638439",
@@ -41,8 +37,7 @@
         "hero": 1,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "18774046",
@@ -50,8 +45,7 @@
         "hero": 1,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "428693",
@@ -59,8 +53,7 @@
         "hero": 2,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "101394",
@@ -68,8 +61,7 @@
         "hero": 2,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "18822035",
@@ -77,8 +69,7 @@
         "hero": 2,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "065021",
@@ -86,8 +77,7 @@
         "hero": 3,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "817932",
@@ -95,8 +85,7 @@
         "hero": 3,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "45931420",
@@ -104,8 +93,7 @@
         "hero": 3,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
 
 
@@ -120,8 +108,7 @@
         "hero": 0,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "004074",
@@ -129,8 +116,7 @@
         "hero": 0,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "374046",
@@ -138,8 +124,7 @@
         "hero": 0,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "04104446",
@@ -147,8 +132,7 @@
         "hero": 0,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "910962",
@@ -156,8 +140,7 @@
         "hero": 0,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "49057646",
@@ -165,8 +148,7 @@
         "hero": 0,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "68758961",
@@ -174,8 +156,7 @@
         "hero": 0,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "885788",
@@ -183,8 +164,7 @@
         "hero": 1,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "788325",
@@ -192,8 +172,7 @@
         "hero": 1,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "230201",
@@ -201,8 +180,7 @@
         "hero": 1,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "42670659",
@@ -210,8 +188,7 @@
         "hero": 1,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "440954",
@@ -219,8 +196,7 @@
         "hero": 1,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "17764027",
@@ -228,8 +204,7 @@
         "hero": 1,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "74217257",
@@ -237,8 +212,7 @@
         "hero": 1,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "229369",
@@ -246,8 +220,7 @@
         "hero": 2,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "578924",
@@ -255,8 +228,7 @@
         "hero": 2,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "950201",
@@ -264,8 +236,7 @@
         "hero": 2,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "55316900",
@@ -273,8 +244,7 @@
         "hero": 2,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "851213",
@@ -282,8 +252,7 @@
         "hero": 2,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "40047139",
@@ -291,8 +260,7 @@
         "hero": 2,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "32052831",
@@ -300,8 +268,7 @@
         "hero": 2,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "491384",
@@ -309,8 +276,7 @@
         "hero": 3,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "075060",
@@ -318,8 +284,7 @@
         "hero": 3,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "288349",
@@ -327,8 +292,7 @@
         "hero": 3,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "06173959",
@@ -336,8 +300,7 @@
         "hero": 3,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "246153",
@@ -345,8 +308,7 @@
         "hero": 3,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "44814916",
@@ -354,8 +316,7 @@
         "hero": 3,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
     {
         "code": "27715162",
@@ -363,8 +324,7 @@
         "hero": 3,
         "power": 0,
         "img": "",
-        "description": "",
-        "used": false
+        "description": ""
     },
 
 

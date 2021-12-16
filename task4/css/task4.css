@@ -65,9 +65,13 @@ input[type="image"] {max-height: 200px;}
     width: 70%;
     max-width: 180px;
 }
-#description {font-size: 20px;}
+#description {
+    margin-left: 5px;
+    font-size: 20px;
+}
 #hero0 {
     max-height: 200px;
     max-width: 50%;
     margin: 0px 33%;
 }
+#object {max-width: 100px;}

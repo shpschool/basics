@@ -1,11 +1,11 @@
 const scene = document.querySelectorAll('#scene');
 const progress1 = document.querySelectorAll('#strenght');
 const progress2 = document.querySelectorAll('#power');
-const powerCont = document.querySelectorAll('#using-power');
 const btn = document.querySelectorAll('#btn');
 const descr = document.querySelectorAll('#description');
 const herous = document.querySelectorAll('.hero');
 const codes = document.querySelectorAll('.text')
+const obj = document.querySelectorAll('#object');
 
 const changeProgressStyle = (el) => {
     if (el.value > 0) {
@@ -25,16 +25,53 @@ const changeProgressStyle = (el) => {
     };
 };
 
-const showPower = async (heroInd, code) => {
-    // let res = await fetch('db/codes.json');
-    // res = await res.json();
-    // console.log(res);
-    description = 'Введи код для выбранного героя, чтобы увидеть описание силы';
-    descr.forEach((el) => el.textContent = description);
-    progress2.forEach((el) => {
-        el.value = 30;
-        changeProgressStyle(el);
+const showTask = (description='Введи код для выбранного героя, чтобы увидеть описание силы') => {
+    descr.forEach((elem) => elem.innerHTML = description);
+};
+
+const showError = (description) => {
+    descr.forEach((elem) => elem.innerHTML = description);
+    obj.forEach((elem) => {
+        elem.src = 'captures/error.png';
+        elem.alt = 'Ошибка';
+        elem.classList.remove('hidden');
     });
+};
+
+const showPower = async (heroInd, code) => {
+    let res = await fetch('https://raw.githubusercontent.com/iamgo100/task_shp/main/task4/db/codes.json');
+    res = await res.json();
+    for (let i = 0; i < res.length; i++) {
+        el = res[i];
+        if (el.code === code) {
+            if (el.hero === heroInd) {
+                if (el.level === level) {
+                    if (el.img) {
+                        obj.forEach((elem) => {
+                            elem.src = el.img.src;
+                            elem.alt = el.img.alt;
+                            elem.classList.remove('hidden');
+                        });
+                    } else obj.forEach((elem) => elem.classList.add('hidden'));
+                    showTask(el.description);
+                    progress2.forEach((elem) => {
+                        elem.value = el.power;
+                        changeProgressStyle(elem);
+                    });
+                    currCode = el.code;
+                    return 1;
+                } else {
+                    showError(`Пройди уровень ${level}, чтобы использовать данную силу.`);
+                    return 1;
+                };
+            } else {
+                showError("Этому герою данная сила не доступна.");
+                return 1;
+            };
+        }
+    };
+    showError("Код неверный. Проверь свою запись и повтори попытку.");
+    return 1;
 };
 
 const hideCodes = () => {
@@ -44,10 +81,12 @@ const hideCodes = () => {
     });
 }
 
+let level = 1;
+let currCode = '';
+let codesArr = [];
 hideCodes();
-scene.forEach((el) => el.innerHTML = '<img src="captures/hero0.png" id="hero0">');
-description = 'Введи код для выбранного героя, чтобы увидеть описание силы';
-descr.forEach((el) => el.textContent = description);
+scene.forEach((el) => el.innerHTML = '<img src="captures/hero0.png" alt="Дракула" id="hero0">');
+showTask();
 
 herous.forEach((el, ind) => {
     const hero = el.children[1];
@@ -63,10 +102,20 @@ herous.forEach((el, ind) => {
 
 btn.forEach((butn) => {
     butn.addEventListener('click', () => {
-        progress1.forEach((el) => {
-            el.value -= progress2[0].value;
-            changeProgressStyle(el);
-        });
+        if (currCode) {
+            if (codesArr.indexOf(currCode) === -1) {
+                progress1.forEach((el) => {
+                    el.value -= progress2[0].value;
+                    changeProgressStyle(el);
+                    codesArr.push(currCode);
+                });
+                progress2.forEach((elem) => {
+                    elem.value = 0;
+                });
+                currCode = "";
+                showTask();
+            } else showError("Эта сила уже использована.");
+        };
         hideCodes();
     });
 });

@@ -7,6 +7,18 @@ const herous = document.querySelectorAll('.hero');
 const codes = document.querySelectorAll('.text')
 const obj = document.querySelectorAll('#object');
 
+const getData = async (url, list) => {
+    let res = await fetch(url);
+    res = await res.json();
+    res.forEach(el => list.push(el));
+};
+
+let level = 1;
+let currCode = '';
+let codesArr = [];
+let tasks = []; getData('db/codes.json', tasks);
+let levels = []; getData('db/levels.json', levels);
+
 const changeProgressStyle = (el) => {
     if (el.value > 0) {
         if (el.value/el.max*100 < 30) {
@@ -38,11 +50,9 @@ const showError = (description) => {
     });
 };
 
-const showPower = async (heroInd, code) => {
-    let res = await fetch('https://raw.githubusercontent.com/iamgo100/task_shp/main/task4/db/codes.json');
-    res = await res.json();
-    for (let i = 0; i < res.length; i++) {
-        el = res[i];
+const showPower = (heroInd, code) => {
+    for (let i = 0; i < tasks.length; i++) {
+        el = tasks[i];
         if (el.code === code) {
             if (el.hero === heroInd) {
                 if (el.level === level) {
@@ -81,9 +91,6 @@ const hideCodes = () => {
     });
 }
 
-let level = 1;
-let currCode = '';
-let codesArr = [];
 hideCodes();
 scene.forEach((el) => el.innerHTML = '<img src="captures/hero0.png" alt="Дракула" id="hero0">');
 showTask();

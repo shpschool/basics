@@ -104,7 +104,7 @@ const hideCodes = () => {
 }
 
 hideCodes();
-
+showLevel();
 showTask();
 
 herous.forEach((el, ind) => {

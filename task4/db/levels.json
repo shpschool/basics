@@ -1,17 +1,14 @@
-[
-    {
-        "level": 1,
+{
+    "level-1" : {
         "streight": 240,
         "task": "<img src='captures/error.png' alt='тест' id='level1'>"
     },
-    {
-        "level": 2,
+    "level-2" : {
         "streight": 1120,
         "task": ""
     },
-    {
-        "level": 3,
+    "level-3" : {
         "streight": 4000,
         "task": ""
     }
-]
+}

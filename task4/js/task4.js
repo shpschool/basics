@@ -48,6 +48,7 @@ const changeProgressStyle = el => {
 
 const showLevel = () => {
     console.log("I'm here!");
+    console.log(levels);
     for (let key in levels) {
         console.log("I'm here - in the cycle!");
         console.log(Number(key));

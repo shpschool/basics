@@ -46,6 +46,7 @@ const changeProgressStyle = el => {
 };
 
 const showLevel = () => {
+    console.log("I'm here!");
     for (let i = 0; i < levels.length; i++) {
         console.log(i === level);
         if (i === level) {

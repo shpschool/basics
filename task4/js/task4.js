@@ -22,7 +22,7 @@ const getLevels = async (url, obj) => {
     };
 };
 
-let level = 0;
+let level = 1;
 let currCode = '';
 let codesArr = [];
 let tasks = []; getData('db/codes.json', tasks);
@@ -46,26 +46,17 @@ const changeProgressStyle = el => {
     };
 };
 
-const showLevel = () => {
+const showLevel = (level) => {
     console.log("I'm here!");
-    console.log(levels);
-    for (let key in levels) {
-        console.log("I'm here - in the cycle!");
-        console.log(Number(key));
-        if (Number(key) === level){
-            console.log("I'm here - in the condition!");
-            elem = levels[key];
-            console.log(elem);
-            progress1.forEach(el => {
-                el.value = elem.streight;
-                el.max = elem.streight;
-                changeProgressStyle(el);
-            });
-            streightText.forEach(el => el.textContent = elem.streight);
-            scene.forEach(el => el.innerHTML = elem.task);
-            return 1;
-        };
-    };
+    elem = levels[level];
+    console.log(elem);
+    progress1.forEach(el => {
+        el.value = elem.streight;
+        el.max = elem.streight;
+        changeProgressStyle(el);
+    });
+    streightText.forEach(el => el.textContent = elem.streight);
+    scene.forEach(el => el.innerHTML = elem.task);
     console.log("I'm here - in the end!")
 };
 
@@ -124,7 +115,7 @@ const hideCodes = () => {
 }
 
 hideCodes();
-showLevel();
+showLevel(level);
 showTask();
 
 herous.forEach((el, ind) => {

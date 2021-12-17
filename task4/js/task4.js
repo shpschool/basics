@@ -103,8 +103,8 @@ const hideCodes = () => {
     });
 }
 
-console.log(levels);
-console.log(tasks);
+console.log(levels[0]);
+console.log(tasks[0]);
 
 hideCodes();
 showLevel();

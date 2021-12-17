@@ -28,8 +28,6 @@ let codesArr = [];
 let tasks = []; getData('db/codes.json', tasks);
 let levels = {}; getLevels('db/levels.json', levels);
 
-console.log(levels);
-
 const changeProgressStyle = el => {
     if (el.value > 0) {
         if (el.value/el.max*100 < 30) {
@@ -49,9 +47,12 @@ const changeProgressStyle = el => {
 };
 
 const showLevel = () => {
-    for ( let key in levels) {
+    console.log("I'm here!");
+    for (let key in levels) {
+        console.log("I'm here - in the cycle!");
         console.log(Number(key));
         if (Number(key) === level){
+            console.log("I'm here - in the condition!");
             elem = levels[key];
             console.log(elem);
             progress1.forEach(el => {
@@ -64,6 +65,7 @@ const showLevel = () => {
             return 1;
         };
     };
+    console.log("I'm here - in the end!")
 };
 
 const showTask = (description='Введи код для выбранного героя, чтобы увидеть описание силы') => {

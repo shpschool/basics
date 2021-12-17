@@ -107,7 +107,7 @@ console.log(levels[0]);
 console.log(tasks[0]);
 
 hideCodes();
-showLevel();
+// showLevel();
 showTask();
 
 herous.forEach((el, ind) => {

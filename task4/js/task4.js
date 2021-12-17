@@ -48,15 +48,15 @@ const changeProgressStyle = el => {
 
 const showLevel = (level) => {
     console.log("I'm here!");
-    elem = levels.level1;
+    elem = levels;
     console.log(elem);
-    progress1.forEach(el => {
-        el.value = elem.streight;
-        el.max = elem.streight;
-        changeProgressStyle(el);
-    });
-    streightText.forEach(el => el.textContent = elem.streight);
-    scene.forEach(el => el.innerHTML = elem.task);
+    // progress1.forEach(el => {
+    //     el.value = elem.streight;
+    //     el.max = elem.streight;
+    //     changeProgressStyle(el);
+    // });
+    // streightText.forEach(el => el.textContent = elem.streight);
+    // scene.forEach(el => el.innerHTML = elem.task);
     console.log("I'm here - in the end!")
 };
 

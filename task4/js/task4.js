@@ -39,14 +39,15 @@ const changeProgressStyle = el => {
 };
 
 const showLevel = () => {
-    streight = levels[level - 1]["streight"];
+    elem = levels[0]
+    streight = elem.streight;
     progress1.forEach(el => {
         el.value = streight;
         el.max = streight;
         changeProgressStyle(el);
     });
     streightText.forEach(el => el.textContent = streight);
-    scene.forEach(el => el.innerHTML = levels[level - 1]["task"]);
+    scene.forEach(el => el.innerHTML = elem.task);
 };
 
 const showTask = (description='Введи код для выбранного героя, чтобы увидеть описание силы') => {
@@ -103,11 +104,8 @@ const hideCodes = () => {
     });
 }
 
-console.log(levels[0]);
-console.log(tasks[0]);
-
 hideCodes();
-// showLevel();
+showLevel();
 showTask();
 
 herous.forEach((el, ind) => {

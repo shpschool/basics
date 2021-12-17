@@ -11,18 +11,21 @@ const streightText = document.querySelectorAll('#strenght-text');
 const getData = async (url, list) => {
     let res = await fetch(url);
     res = await res.json();
-    console.log(res);
-    res.forEach(el => {
-        list.push(el);
-        console.log(el);
-    });
+    res.forEach(el => list.push(el));
+};
+const getLevels = async (url, list) => {
+    let res = await fetch(url);
+    res = await res.json();
+    list.push(res["level-1"]);
+    list.push(res["level-2"]);
+    list.push(res["level-3"]);
 };
 
 let level = 1;
 let currCode = '';
 let codesArr = [];
 let tasks = []; getData('db/codes.json', tasks);
-let levels = []; getData('db/levels.json', levels);
+let levels = []; getLevels('db/levels.json', levels);
 
 const changeProgressStyle = el => {
     if (el.value > 0) {

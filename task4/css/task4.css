@@ -74,3 +74,9 @@ input[type="image"] {max-height: 200px;}
     margin: 0px 33%;
 }
 #object {max-width: 100px;}
+#level1 {
+    position: relative;
+    left: 30%;
+    top: 50%;
+    width: 100px;
+}

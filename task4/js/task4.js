@@ -16,8 +16,10 @@ const getData = async (url, list) => {
 const getLevels = async (url, obj) => {
     let res = await fetch(url);
     res = await res.json();
-    obj = res;
-    console.log(res);
+    for (let key in res) {
+        let elem = res[key];
+        obj.key = elem;
+    };
 };
 
 let level = 0;

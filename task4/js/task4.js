@@ -46,15 +46,20 @@ const changeProgressStyle = el => {
 };
 
 const showLevel = () => {
-    elem = levels[level];
-    console.log(elem);
-    progress1.forEach(el => {
-        el.value = elem.streight;
-        el.max = elem.streight;
-        changeProgressStyle(el);
-    });
-    streightText.forEach(el => el.textContent = elem.streight);
-    scene.forEach(el => el.innerHTML = elem.task);
+    for (let i = 0; i < levels.length; i++) {
+        if (i === level) {
+            elem = levels[i];
+            console.log(elem);
+            progress1.forEach(el => {
+                el.value = elem.streight;
+                el.max = elem.streight;
+                changeProgressStyle(el);
+            });
+            streightText.forEach(el => el.textContent = elem.streight);
+            scene.forEach(el => el.innerHTML = elem.task);
+            return 1;
+        };
+    };
 };
 
 const showTask = (description='Введи код для выбранного героя, чтобы увидеть описание силы') => {

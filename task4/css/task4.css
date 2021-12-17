@@ -60,7 +60,6 @@ input[type="image"] {max-height: 200px;}
 #start-pc {align-items: flex-start;}
 #start-mobile {display: none;}
 #with-power-mobile {display: none;}
-#scene {margin-top: 20px;}
 #power {
     width: 70%;
     max-width: 180px;

@@ -6,6 +6,7 @@ const descr = document.querySelectorAll('#description');
 const herous = document.querySelectorAll('.hero');
 const codes = document.querySelectorAll('.text')
 const obj = document.querySelectorAll('#object');
+const streightText = document.querySelectorAll('#strenght-text');
 
 const getData = async (url, list) => {
     let res = await fetch(url);
@@ -19,7 +20,7 @@ let codesArr = [];
 let tasks = []; getData('db/codes.json', tasks);
 let levels = []; getData('db/levels.json', levels);
 
-const changeProgressStyle = (el) => {
+const changeProgressStyle = el => {
     if (el.value > 0) {
         if (el.value/el.max*100 < 30) {
             el.classList.remove('strong');
@@ -37,16 +38,27 @@ const changeProgressStyle = (el) => {
     };
 };
 
-const showTask = (description='Введи код для выбранного героя, чтобы увидеть описание силы') => {
-    descr.forEach((elem) => elem.innerHTML = description);
+const showLevel = () => {
+    streight = levels[level - 1]["streight"];
+    progress1.forEach(el => {
+        el.value = streight;
+        el.max = streight;
+        changeProgressStyle(el);
+    });
+    streightText.forEach(el => el.textContent = streight);
+    scene.forEach(el => el.innerHTML = levels[level - 1]["task"]);
 };
 
-const showError = (description) => {
-    descr.forEach((elem) => elem.innerHTML = description);
-    obj.forEach((elem) => {
-        elem.src = 'captures/error.png';
-        elem.alt = 'Ошибка';
-        elem.classList.remove('hidden');
+const showTask = (description='Введи код для выбранного героя, чтобы увидеть описание силы') => {
+    descr.forEach(el => el.innerHTML = description);
+};
+
+const showError = description => {
+    descr.forEach(el => el.innerHTML = description);
+    obj.forEach(el => {
+        el.src = 'captures/error.png';
+        el.alt = 'Ошибка';
+        el.classList.remove('hidden');
     });
 };
 
@@ -57,14 +69,14 @@ const showPower = (heroInd, code) => {
             if (el.hero === heroInd) {
                 if (el.level === level) {
                     if (el.img) {
-                        obj.forEach((elem) => {
+                        obj.forEach(elem => {
                             elem.src = el.img.src;
                             elem.alt = el.img.alt;
                             elem.classList.remove('hidden');
                         });
-                    } else obj.forEach((elem) => elem.classList.add('hidden'));
+                    } else obj.forEach(elem => elem.classList.add('hidden'));
                     showTask(el.description);
-                    progress2.forEach((elem) => {
+                    progress2.forEach(elem => {
                         elem.value = el.power;
                         changeProgressStyle(elem);
                     });
@@ -85,14 +97,14 @@ const showPower = (heroInd, code) => {
 };
 
 const hideCodes = () => {
-    codes.forEach((el) => {
+    codes.forEach(el => {
         el.classList.add('hidden');
         el.value = null;
     });
 }
 
 hideCodes();
-scene.forEach((el) => el.innerHTML = '<img src="captures/hero0.png" alt="Дракула" id="hero0">');
+
 showTask();
 
 herous.forEach((el, ind) => {
@@ -111,14 +123,12 @@ btn.forEach((butn) => {
     butn.addEventListener('click', () => {
         if (currCode) {
             if (codesArr.indexOf(currCode) === -1) {
-                progress1.forEach((el) => {
+                progress1.forEach(el => {
                     el.value -= progress2[0].value;
                     changeProgressStyle(el);
                     codesArr.push(currCode);
                 });
-                progress2.forEach((elem) => {
-                    elem.value = 0;
-                });
+                progress2.forEach(el => el.value = 0);
                 currCode = "";
                 showTask();
             } else showError("Эта сила уже использована.");

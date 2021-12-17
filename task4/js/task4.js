@@ -46,8 +46,9 @@ const changeProgressStyle = el => {
 };
 
 const showLevel = () => {
+    let i = 0;
     console.log("I'm here!");
-    for (let i = 0; i < levels.length; i++) {
+    while (i <= level) {
         console.log(i === level);
         if (i === level) {
             elem = levels[i];
@@ -59,8 +60,8 @@ const showLevel = () => {
             });
             streightText.forEach(el => el.textContent = elem.streight);
             scene.forEach(el => el.innerHTML = elem.task);
-            return 1;
         };
+        i++;
     };
 };
 

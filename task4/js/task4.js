@@ -48,7 +48,7 @@ const changeProgressStyle = el => {
 
 const showLevel = (level) => {
     console.log("I'm here!");
-    elem = levels[level];
+    elem = levels["1"];
     console.log(elem);
     progress1.forEach(el => {
         el.value = elem.streight;

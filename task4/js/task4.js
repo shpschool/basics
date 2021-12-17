@@ -39,6 +39,7 @@ const changeProgressStyle = el => {
 };
 
 const showLevel = () => {
+    console.log(levels);
     for (let i = 0; i < levels.length; i++) {
         elem = levels[i];
         console.log(elem)
@@ -71,7 +72,6 @@ const showError = description => {
 const showPower = (heroInd, code) => {
     for (let i = 0; i < tasks.length; i++) {
         el = tasks[i];
-        console.log(el);
         if (el.code === code) {
             if (el.hero === heroInd) {
                 if (el.level === level) {

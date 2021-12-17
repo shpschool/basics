@@ -18,7 +18,7 @@ const getLevels = async (url, obj) => {
     res = await res.json();
     for (let key in res) {
         let elem = res[key];
-        obj.key = elem;
+        obj[key] = elem;
     };
 };
 
@@ -48,24 +48,23 @@ const changeProgressStyle = el => {
     };
 };
 
-// const showLevel = () => {
-//     let l = '';
-//     for ( let key in )
-//     while (i <= level) {
-//         if (i === level) {
-//             elem = levels[i];
-//             console.log(elem);
-//             progress1.forEach(el => {
-//                 el.value = elem.streight;
-//                 el.max = elem.streight;
-//                 changeProgressStyle(el);
-//             });
-//             streightText.forEach(el => el.textContent = elem.streight);
-//             scene.forEach(el => el.innerHTML = elem.task);
-//         };
-//         i++;
-//     };
-// };
+const showLevel = () => {
+    for ( let key in levels) {
+        console.log(Number(key));
+        if (Number(key) === level){
+            elem = levels[key];
+            console.log(elem);
+            progress1.forEach(el => {
+                el.value = elem.streight;
+                el.max = elem.streight;
+                changeProgressStyle(el);
+            });
+            streightText.forEach(el => el.textContent = elem.streight);
+            scene.forEach(el => el.innerHTML = elem.task);
+            return 1;
+        };
+    };
+};
 
 const showTask = (description='Введи код для выбранного героя, чтобы увидеть описание силы') => {
     descr.forEach(el => el.innerHTML = description);
@@ -122,7 +121,7 @@ const hideCodes = () => {
 }
 
 hideCodes();
-// showLevel();
+showLevel();
 showTask();
 
 herous.forEach((el, ind) => {

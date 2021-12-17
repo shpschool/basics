@@ -11,7 +11,11 @@ const streightText = document.querySelectorAll('#strenght-text');
 const getData = async (url, list) => {
     let res = await fetch(url);
     res = await res.json();
-    res.forEach(el => list.push(el));
+    console.log(res);
+    res.forEach(el => {
+        list.push(el);
+        console.log(el);
+    });
 };
 
 let level = 1;

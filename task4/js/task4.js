@@ -17,6 +17,7 @@ const getLevels = async (url, obj) => {
     let res = await fetch(url);
     res = await res.json();
     obj = res;
+    console.log(res);
 };
 
 let level = 0;

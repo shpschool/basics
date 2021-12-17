@@ -13,19 +13,19 @@ const getData = async (url, list) => {
     res = await res.json();
     res.forEach(el => list.push(el));
 };
-const getLevels = async (url, list) => {
+const getLevels = async (url, obj) => {
     let res = await fetch(url);
     res = await res.json();
-    list.push(res["level-1"]);
-    list.push(res["level-2"]);
-    list.push(res["level-3"]);
+    obj = res;
 };
 
 let level = 0;
 let currCode = '';
 let codesArr = [];
 let tasks = []; getData('db/codes.json', tasks);
-let levels = []; getLevels('db/levels.json', levels);
+let levels = {}; getLevels('db/levels.json', levels);
+
+console.log(levels);
 
 const changeProgressStyle = el => {
     if (el.value > 0) {
@@ -45,25 +45,24 @@ const changeProgressStyle = el => {
     };
 };
 
-const showLevel = () => {
-    let i = 0;
-    console.log("I'm here!");
-    while (i <= level) {
-        console.log(i === level);
-        if (i === level) {
-            elem = levels[i];
-            console.log(elem);
-            progress1.forEach(el => {
-                el.value = elem.streight;
-                el.max = elem.streight;
-                changeProgressStyle(el);
-            });
-            streightText.forEach(el => el.textContent = elem.streight);
-            scene.forEach(el => el.innerHTML = elem.task);
-        };
-        i++;
-    };
-};
+// const showLevel = () => {
+//     let l = '';
+//     for ( let key in )
+//     while (i <= level) {
+//         if (i === level) {
+//             elem = levels[i];
+//             console.log(elem);
+//             progress1.forEach(el => {
+//                 el.value = elem.streight;
+//                 el.max = elem.streight;
+//                 changeProgressStyle(el);
+//             });
+//             streightText.forEach(el => el.textContent = elem.streight);
+//             scene.forEach(el => el.innerHTML = elem.task);
+//         };
+//         i++;
+//     };
+// };
 
 const showTask = (description='Введи код для выбранного героя, чтобы увидеть описание силы') => {
     descr.forEach(el => el.innerHTML = description);
@@ -120,7 +119,7 @@ const hideCodes = () => {
 }
 
 hideCodes();
-showLevel();
+// showLevel();
 showTask();
 
 herous.forEach((el, ind) => {

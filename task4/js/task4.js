@@ -29,7 +29,7 @@ const levels = {
         streight: 1120,
     },
     "3" : {
-        "streight": 4000,
+        streight: 4000,
     }
 }
 
@@ -65,6 +65,11 @@ const showLevel = level => {
     });
 };
 
+const setDefault = () => {
+    progress2.forEach(el => el.value = 0);
+    currCode = "";
+};
+
 const showTask = (description='Введи код для выбранного героя, чтобы увидеть описание силы') => {
     descr.forEach(el => el.innerHTML = description);
 };
@@ -76,6 +81,7 @@ const showError = description => {
         el.alt = 'Ошибка';
         el.classList.remove('hidden');
     });
+    setDefault();
 };
 
 const showPower = (heroInd, code) => {
@@ -106,7 +112,7 @@ const showPower = (heroInd, code) => {
                 showError("Этому герою данная сила не доступна.");
                 return 1;
             };
-        }
+        };
     };
     showError("Код неверный. Проверь свою запись и повтори попытку.");
     return 1;
@@ -144,11 +150,17 @@ btn.forEach((butn) => {
                     changeProgressStyle(el);
                     codesArr.push(currCode);
                 });
-                progress2.forEach(el => el.value = 0);
-                currCode = "";
+                setDefault();
                 showTask();
-            } else showError("Эта сила уже использована.");
+                if (progress1[0].value <= 0) {
+                    level++;
+                    showLevel(level);
+                };
+            } else {
+                showError("Эта сила уже использована.");
+            };
         };
         hideCodes();
+        setDefault();
     });
 });

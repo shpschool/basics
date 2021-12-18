@@ -7,6 +7,9 @@ const herous = document.querySelectorAll('.hero');
 const codes = document.querySelectorAll('.text')
 const obj = document.querySelectorAll('#object');
 const streightText = document.querySelectorAll('#strenght-text');
+const wrapModal = document.getElementById("wrap-modal");
+const modalImg = document.getElementById("herous");
+const modalText = document.getElementById("modal-h1");
 
 const getData = async (url, list) => {
     let res = await fetch(url);
@@ -22,16 +25,25 @@ let tasks = []; getData('https://raw.githubusercontent.com/iamgo100/task_shp/mai
 const levels = {
     "1" : {
         streight: 240,
-        src: "captures/hero0.png",
-        alt: "Дракула"
+        src: "",
+        alt: ""
     },
     "2" : {
         streight: 1120,
+        src: "",
+        alt: ""
     },
     "3" : {
         streight: 4000,
+        src: "",
+        alt: ""
+    },
+    "4" : {
+        streight: 0,
+        src: "",
+        alt: ""
     }
-}
+};
 
 const changeProgressStyle = el => {
     if (el.value > 0) {
@@ -52,17 +64,21 @@ const changeProgressStyle = el => {
 };
 
 const showLevel = level => {
-    elem = levels[level.toString()];
-    progress1.forEach(el => {
-        el.value = elem.streight;
-        el.max = elem.streight;
-        changeProgressStyle(el);
-    });
-    streightText.forEach(el => el.textContent = elem.streight);
-    scene.forEach(el => {
-        el.src = elem.src;
-        el.alt = elem.alt;
-    });
+    if (level <= 3) {
+        elem = levels[level.toString()];
+        progress1.forEach(el => {
+            el.value = elem.streight;
+            el.max = elem.streight;
+            changeProgressStyle(el);
+        });
+        streightText.forEach(el => el.textContent = elem.streight);
+        scene.forEach(el => {
+            el.src = elem.src;
+            el.alt = elem.alt;
+        });
+    } else {
+        document.getElementById('main').classList.add('hidden');
+    }
 };
 
 const setDefault = () => {
@@ -125,6 +141,18 @@ const hideCodes = () => {
     });
 }
 
+const modal = () => {
+    if (level < 3) {
+        modalText.textContent = `Молодцы! Вы прошли ${level} уровень! Продолжаем!`;
+        wrapModal.classList.remove('hidden');
+        setTimeout(() => wrapModal.classList.add('hidden'), 3000);
+    } else {
+        modalText.textContent = `Игра окончена! Вы освободили Драка!`;
+        modalImg.classList.remove('hidden');
+        wrapModal.classList.remove('hidden');
+    };
+};
+
 hideCodes();
 showLevel(level);
 showTask();
@@ -150,9 +178,11 @@ btn.forEach((butn) => {
                     changeProgressStyle(el);
                     codesArr.push(currCode);
                 });
+                streightText.forEach(el => el.textContent = progress1[0].value);
                 setDefault();
                 showTask();
                 if (progress1[0].value <= 0) {
+                    modal();
                     level++;
                     showLevel(level);
                 };

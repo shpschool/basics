@@ -6,11 +6,14 @@
     label {font-size: 14px;}
     #description {font-size: 16px;}
     p.name {font-size: 16px;}
+    .text {font-size: 12px;}
     input[type="image"] {max-height: 150px;}
+    #scene {max-height: 180px;}
     #start-pc {display: none;}
     #start-mobile {display: flex;}
     #with-power-pc {display: none;}
     #with-power-mobile {display: flex;}
+    #object {max-width: 50px;}
     #btn {
         min-height: 30px;
         font-size: 14px;

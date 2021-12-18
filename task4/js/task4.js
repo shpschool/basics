@@ -13,20 +13,25 @@ const getData = async (url, list) => {
     res = await res.json();
     res.forEach(el => list.push(el));
 };
-const getLevels = async (url, obj) => {
-    let res = await fetch(url);
-    res = await res.json();
-    for (let key in res) {
-        let elem = res[key];
-        obj[key] = elem;
-    };
-};
 
 let level = 1;
 let currCode = '';
 let codesArr = [];
-let tasks = []; getData('db/codes.json', tasks);
-let levels = {}; getLevels('db/levels.json', levels);
+let tasks = []; getData('https://raw.githubusercontent.com/iamgo100/task_shp/main/task4/db/codes.json', tasks);
+
+const levels = {
+    "1" : {
+        streight: 240,
+        src: "captures/hero0.png",
+        alt: "Дракула"
+    },
+    "2" : {
+        streight: 1120,
+    },
+    "3" : {
+        "streight": 4000,
+    }
+}
 
 const changeProgressStyle = el => {
     if (el.value > 0) {
@@ -46,20 +51,18 @@ const changeProgressStyle = el => {
     };
 };
 
-const showLevel = (level) => {
-    console.log("I'm here!");
-    for (let key in levels) {
-        console.log(levels[key])
-    };
-    // console.log(elem);
-    // progress1.forEach(el => {
-    //     el.value = elem.streight;
-    //     el.max = elem.streight;
-    //     changeProgressStyle(el);
-    // });
-    // streightText.forEach(el => el.textContent = elem.streight);
-    // scene.forEach(el => el.innerHTML = elem.task);
-    console.log("I'm here - in the end!")
+const showLevel = level => {
+    elem = levels[level.toString()];
+    progress1.forEach(el => {
+        el.value = elem.streight;
+        el.max = elem.streight;
+        changeProgressStyle(el);
+    });
+    streightText.forEach(el => el.textContent = elem.streight);
+    scene.forEach(el => {
+        el.src = elem.src;
+        el.alt = elem.alt;
+    });
 };
 
 const showTask = (description='Введи код для выбранного героя, чтобы увидеть описание силы') => {

@@ -3,7 +3,7 @@
         "code": "200893",
         "level": 1,
         "hero": 0,
-        "power": 30,
+        "power": 10,
         "img": "",
         "description": "ВСЕ СРАБОТАЛО!!!"
     },
@@ -11,89 +11,89 @@
         "code": "823766",
         "level": 1,
         "hero": 0,
-        "power": 0,
+        "power": 20,
         "img": "",
-        "description": ""
+        "description": "ВСЕ СРАБОТАЛО!!!"
     },
     {
         "code": "99405897",
         "level": 1,
         "hero": 0,
-        "power": 0,
+        "power": 30,
         "img": "",
-        "description": ""
+        "description": "ВСЕ СРАБОТАЛО!!!"
     },
     {
         "code": "693587",
         "level": 1,
         "hero": 1,
-        "power": 0,
+        "power": 10,
         "img": "",
-        "description": ""
+        "description": "ВСЕ СРАБОТАЛО!!!"
     },
     {
         "code": "638439",
         "level": 1,
         "hero": 1,
-        "power": 0,
+        "power": 20,
         "img": "",
-        "description": ""
+        "description": "ВСЕ СРАБОТАЛО!!!"
     },
     {
         "code": "18774046",
         "level": 1,
         "hero": 1,
-        "power": 0,
+        "power": 30,
         "img": "",
-        "description": ""
+        "description": "ВСЕ СРАБОТАЛО!!!"
     },
     {
         "code": "428693",
         "level": 1,
         "hero": 2,
-        "power": 0,
+        "power": 10,
         "img": "",
-        "description": ""
+        "description": "ВСЕ СРАБОТАЛО!!!"
     },
     {
         "code": "101394",
         "level": 1,
         "hero": 2,
-        "power": 0,
+        "power": 20,
         "img": "",
-        "description": ""
+        "description": "ВСЕ СРАБОТАЛО!!!"
     },
     {
         "code": "18822035",
         "level": 1,
         "hero": 2,
-        "power": 0,
+        "power": 30,
         "img": "",
-        "description": ""
+        "description": "ВСЕ СРАБОТАЛО!!!"
     },
     {
         "code": "065021",
         "level": 1,
         "hero": 3,
-        "power": 0,
+        "power": 10,
         "img": "",
-        "description": ""
+        "description": "ВСЕ СРАБОТАЛО!!!"
     },
     {
         "code": "817932",
         "level": 1,
         "hero": 3,
-        "power": 0,
+        "power": 20,
         "img": "",
-        "description": ""
+        "description": "ВСЕ СРАБОТАЛО!!!"
     },
     {
         "code": "45931420",
         "level": 1,
         "hero": 3,
-        "power": 0,
+        "power": 30,
         "img": "",
-        "description": ""
+        "description": "ВСЕ СРАБОТАЛО!!!"
     },
 
 

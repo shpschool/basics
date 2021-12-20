@@ -58,79 +58,6 @@ const changeProgressStyle = el => {
     };
 };
 
-const showLevel = level => {
-    if (level <= 3) {
-        elem = levels[level.toString()];
-        progress1.forEach(el => {
-            el.value = elem.streight;
-            el.max = elem.streight;
-            changeProgressStyle(el);
-        });
-        streightText.forEach(el => el.textContent = elem.streight);
-        scene.forEach(el => {
-            el.src = elem.src;
-            el.alt = elem.alt;
-        });
-    } else {
-        document.getElementById('main').classList.add('hidden');
-    }
-};
-
-const setDefault = () => {
-    obj.forEach(elem => elem.classList.add('hidden'));
-    progress2.forEach(el => el.value = 0);
-    currCode = "";
-};
-
-const showTask = (description='Введи код для выбранного героя, чтобы увидеть описание силы') => {
-    descr.forEach(el => el.innerHTML = description);
-};
-
-const showError = description => {
-    progress2.forEach(el => el.value = 0);
-    currCode = "";
-    descr.forEach(el => el.innerHTML = description);
-    obj.forEach(el => {
-        el.src = 'captures/error.png';
-        el.alt = 'Ошибка';
-        el.classList.remove('hidden');
-    });
-};
-
-const showPower = (heroInd, code) => {
-    for (let i = 0; i < tasks.length; i++) {
-        el = tasks[i];
-        if (el.code === code) {
-            if (el.hero === heroInd) {
-                if (el.level === level) {
-                    if (el.img) {
-                        obj.forEach(elem => {
-                            elem.src = el.img.src;
-                            elem.alt = el.img.alt;
-                            elem.classList.remove('hidden');
-                        });
-                    } else obj.forEach(elem => elem.classList.add('hidden'));
-                    showTask(el.description);
-                    progress2.forEach(elem => {
-                        elem.value = el.power;
-                        changeProgressStyle(elem);
-                    });
-                    currCode = el.code;
-                    return 1;
-                } else {
-                    showError(`Пройди уровень ${level}, чтобы использовать данную силу.`);
-                    return 1;
-                };
-            } else {
-                showError("Этому герою данная сила не доступна.");
-                return 1;
-            };
-        };
-    };
-    showError("Код неверный. Проверь свою запись и повтори попытку.");
-    return 1;
-};
-
 const hideCodes = () => {
     codes.forEach(el => {
         el.classList.add('hidden');
@@ -150,6 +77,103 @@ const modal = () => {
     };
 };
 
+const showLevel = level => {
+    if (level <= 3) {
+        elem = levels[level.toString()];
+        progress1.forEach(el => {
+            el.value = elem.streight;
+            el.max = elem.streight;
+            changeProgressStyle(el);
+        });
+        streightText.forEach(el => el.textContent = elem.streight);
+        scene.forEach(el => {
+            el.src = elem.src;
+            el.alt = elem.alt;
+        });
+    } else {
+        document.getElementById('main').classList.add('hidden');
+    }
+};
+
+const showTask = (description='Введи код для выбранного героя, чтобы увидеть описание силы') => {
+    descr.forEach(el => el.innerHTML = description);
+};
+
+const showError = description => {
+    progress2.forEach(el => el.value = 0);
+    currCode = "";
+    descr.forEach(el => el.innerHTML = description);
+    obj.forEach(el => {
+        el.src = 'captures/error.png';
+        el.alt = 'Ошибка';
+        el.classList.remove('hidden');
+    });
+};
+
+const treatment = (status, el = {}) => {
+    switch (status) {
+        case 0:
+            if (el.img) {
+                obj.forEach(elem => {
+                    elem.src = el.img.src;
+                    elem.alt = el.img.alt;
+                    elem.classList.remove('hidden');
+                });
+            } else obj.forEach(elem => elem.classList.add('hidden'));
+            showTask(el.description);
+            progress2.forEach(elem => {
+                elem.value = el.power;
+                changeProgressStyle(elem);
+            });
+            currCode = el.code;
+            break;
+        case 1:
+            showError(`Пройди уровень ${level}, чтобы использовать данную силу.`)
+            break;
+        case 2:
+            showError("Этому герою данная сила не доступна.")
+            break;
+        case 3:
+            showError("Код неверный. Проверь свою запись и повтори попытку.")
+            break;
+        case -1:
+            progress1.forEach(elem => {
+                elem.value -= progress2[0].value;
+                changeProgressStyle(elem);
+                codesArr.push(currCode);
+            });
+            streightText.forEach(elem => elem.textContent = progress1[0].value);
+            showTask();
+            hideCodes();
+            obj.forEach(elem => elem.classList.add('hidden'));
+            progress2.forEach(elem => elem.value = 0);
+            currCode = "";
+            if (progress1[0].value <= 0) {
+                modal();
+                level++;
+                showLevel(level);
+            };
+            break;
+        default:
+            showError("Эта сила уже использована.");
+            hideCodes();
+            break;
+    }
+};
+
+const showPower = (heroInd, code) => {
+    for (let i = 0; i < tasks.length; i++) {
+        el = tasks[i];
+        if (el.code === code) {
+            if (el.hero === heroInd) {
+                if (el.level === level) return (0, el)
+                else return 1;
+            } else return 2;
+        };
+    };
+    return 3;
+};
+
 hideCodes();
 showLevel(level);
 showTask();
@@ -162,32 +186,14 @@ herous.forEach((el, ind) => {
         code.classList.remove('hidden')
     });
     code.addEventListener('change', () => {
-        showPower(ind, code.value);
+        treatment(showPower(ind, code.value));
     });
 });
 
 btn.forEach((butn) => {
     butn.addEventListener('click', () => {
         if (currCode) {
-            if (codesArr.indexOf(currCode) === -1) {
-                progress1.forEach(el => {
-                    el.value -= progress2[0].value;
-                    changeProgressStyle(el);
-                    codesArr.push(currCode);
-                });
-                streightText.forEach(el => el.textContent = progress1[0].value);
-                setDefault();
-                showTask();
-                if (progress1[0].value <= 0) {
-                    modal();
-                    level++;
-                    showLevel(level);
-                };
-            } else {
-                showError("Эта сила уже использована.");
-            };
+            treatment(codesArr.indexOf(currCode));
         };
-        hideCodes();
-        setDefault();
     });
 });

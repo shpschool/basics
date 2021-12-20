@@ -112,7 +112,7 @@ const showError = description => {
 
 const treatment = (status, el = {}) => {
     switch (status) {
-        case 0:
+        case 1:
             if (el.img) {
                 obj.forEach(elem => {
                     elem.src = el.img.src;
@@ -127,16 +127,20 @@ const treatment = (status, el = {}) => {
             });
             currCode = el.code;
             break;
-        case 1:
+        case 2:
             showError(`Пройди уровень ${level}, чтобы использовать данную силу.`)
             break;
-        case 2:
+        case 3:
             showError("Этому герою данная сила не доступна.")
             break;
-        case 3:
+        case 4:
             showError("Код неверный. Проверь свою запись и повтори попытку.")
             break;
-        case -1:
+        case 5:
+            showError("Эта сила уже использована.");
+            hideCodes();
+            break;
+        case 6:
             progress1.forEach(elem => {
                 elem.value -= progress2[0].value;
                 changeProgressStyle(elem);
@@ -154,10 +158,6 @@ const treatment = (status, el = {}) => {
                 showLevel(level);
             };
             break;
-        default:
-            showError("Эта сила уже использована.");
-            hideCodes();
-            break;
     }
 };
 
@@ -166,12 +166,12 @@ const showPower = (heroInd, code) => {
         el = tasks[i];
         if (el.code === code) {
             if (el.hero === heroInd) {
-                if (el.level === level) return (0, el)
-                else return 1;
-            } else return 2;
+                if (el.level === level) return (1, el)
+                else return 2;
+            } else return 3;
         };
     };
-    return 3;
+    return 4;
 };
 
 hideCodes();
@@ -193,7 +193,8 @@ herous.forEach((el, ind) => {
 btn.forEach((butn) => {
     butn.addEventListener('click', () => {
         if (currCode) {
-            treatment(codesArr.indexOf(currCode));
+            if (codesArr.indexOf(currCode) === -1) treatment(6)
+            else treatment(5);
         };
     });
 });

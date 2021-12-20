@@ -25,17 +25,17 @@ let tasks = []; getData('https://raw.githubusercontent.com/iamgo100/task_shp/mai
 const levels = {
     "1" : {
         streight: 240,
-        src: "",
+        src: "captures/level1.png",
         alt: "Уровень 1. Дракула под замком и в цепях"
     },
     "2" : {
         streight: 1120,
-        src: "",
+        src: "captures/level2.png",
         alt: "Уровень 2. Дракула просто в цепях"
     },
     "3" : {
         streight: 4000,
-        src: "",
+        src: "captures/level3.png",
         alt: "Уровень 3. Дракула в магической ловушке"
     }
 };

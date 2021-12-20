@@ -24,16 +24,19 @@ let tasks = []; getData('db/codes.json', tasks);
 
 const levels = {
     "1" : {
+        maxPower: 30,
         streight: 240,
         src: "captures/level1.png",
         alt: "Уровень 1. Дракула под замком и в цепях"
     },
     "2" : {
+        maxPower: 70,
         streight: 1120,
         src: "captures/level2.png",
         alt: "Уровень 2. Дракула просто в цепях"
     },
     "3" : {
+        maxPower: 300,
         streight: 4000,
         src: "captures/level3.png",
         alt: "Уровень 3. Дракула в магической ловушке"
@@ -84,6 +87,9 @@ const showLevel = level => {
             el.value = elem.streight;
             el.max = elem.streight;
             changeProgressStyle(el);
+        });
+        progress2.forEach(el => {
+            el.max = elem.maxPower;
         });
         streightText.forEach(el => el.textContent = elem.streight);
         scene.forEach(el => {

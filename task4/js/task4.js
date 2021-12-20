@@ -20,7 +20,7 @@ const getData = async (url, list) => {
 let level = 1;
 let currCode = '';
 let codesArr = [];
-let tasks = []; getData('https://raw.githubusercontent.com/iamgo100/task_shp/main/task4/db/codes.json', tasks);
+let tasks = []; getData('db/codes.json', tasks);
 
 const levels = {
     "1" : {

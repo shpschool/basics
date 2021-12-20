@@ -87,7 +87,8 @@ const showTask = (description='Введи код для выбранного г�
 };
 
 const showError = description => {
-    setDefault();
+    progress2.forEach(el => el.value = 0);
+    currCode = "";
     descr.forEach(el => el.innerHTML = description);
     obj.forEach(el => {
         el.src = 'captures/error.png';

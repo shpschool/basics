@@ -77,6 +77,7 @@ const showLevel = level => {
 };
 
 const setDefault = () => {
+    obj.forEach(elem => elem.classList.add('hidden'));
     progress2.forEach(el => el.value = 0);
     currCode = "";
 };
@@ -86,13 +87,13 @@ const showTask = (description='Введи код для выбранного г�
 };
 
 const showError = description => {
+    setDefault();
     descr.forEach(el => el.innerHTML = description);
     obj.forEach(el => {
         el.src = 'captures/error.png';
         el.alt = 'Ошибка';
         el.classList.remove('hidden');
     });
-    setDefault();
 };
 
 const showPower = (heroInd, code) => {

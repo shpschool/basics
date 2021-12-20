@@ -110,23 +110,8 @@ const showError = description => {
     });
 };
 
-const treatment = (status, el = {}) => {
+const treatmentError = (status) => {
     switch (status) {
-        case 1:
-            if (el.img) {
-                obj.forEach(elem => {
-                    elem.src = el.img.src;
-                    elem.alt = el.img.alt;
-                    elem.classList.remove('hidden');
-                });
-            } else obj.forEach(elem => elem.classList.add('hidden'));
-            showTask(el.description);
-            progress2.forEach(elem => {
-                elem.value = el.power;
-                changeProgressStyle(elem);
-            });
-            currCode = el.code;
-            break;
         case 2:
             showError(`Пройди уровень ${level}, чтобы использовать данную силу.`)
             break;
@@ -140,25 +125,7 @@ const treatment = (status, el = {}) => {
             showError("Эта сила уже использована.");
             hideCodes();
             break;
-        case 6:
-            progress1.forEach(elem => {
-                elem.value -= progress2[0].value;
-                changeProgressStyle(elem);
-                codesArr.push(currCode);
-            });
-            streightText.forEach(elem => elem.textContent = progress1[0].value);
-            showTask();
-            hideCodes();
-            obj.forEach(elem => elem.classList.add('hidden'));
-            progress2.forEach(elem => elem.value = 0);
-            currCode = "";
-            if (progress1[0].value <= 0) {
-                modal();
-                level++;
-                showLevel(level);
-            };
-            break;
-    }
+    };
 };
 
 const showPower = (heroInd, code) => {
@@ -166,8 +133,22 @@ const showPower = (heroInd, code) => {
         el = tasks[i];
         if (el.code === code) {
             if (el.hero === heroInd) {
-                if (el.level === level) return (1, el)
-                else return 2;
+                if (el.level === level) {
+                    if (el.img) {
+                        obj.forEach(elem => {
+                            elem.src = el.img.src;
+                            elem.alt = el.img.alt;
+                            elem.classList.remove('hidden');
+                        });
+                    } else obj.forEach(elem => elem.classList.add('hidden'));
+                    showTask(el.description);
+                    progress2.forEach(elem => {
+                        elem.value = el.power;
+                        changeProgressStyle(elem);
+                    });
+                    currCode = el.code;
+                    return 1;
+                } else return 2;
             } else return 3;
         };
     };
@@ -186,15 +167,32 @@ herous.forEach((el, ind) => {
         code.classList.remove('hidden')
     });
     code.addEventListener('change', () => {
-        treatment(showPower(ind, code.value));
+        let status = showPower(ind, code.value)
+        if (status !== 1) treatmentError(status);
     });
 });
 
 btn.forEach((butn) => {
     butn.addEventListener('click', () => {
         if (currCode) {
-            if (codesArr.indexOf(currCode) === -1) treatment(6)
-            else treatment(5);
+            if (codesArr.indexOf(currCode) === -1) {
+                progress1.forEach(elem => {
+                    elem.value -= progress2[0].value;
+                    changeProgressStyle(elem);
+                    codesArr.push(currCode);
+                });
+                streightText.forEach(elem => elem.textContent = progress1[0].value);
+                showTask();
+                hideCodes();
+                obj.forEach(elem => elem.classList.add('hidden'));
+                progress2.forEach(elem => elem.value = 0);
+                currCode = "";
+                if (progress1[0].value <= 0) {
+                    modal();
+                    level++;
+                    showLevel(level);
+                };
+            } else treatmentError(5);
         };
     });
 });

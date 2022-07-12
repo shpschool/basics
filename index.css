@@ -8,7 +8,7 @@ body {
     align-items: center;
     font-family: "Comic Sans MS", sans-serif;
 }
-button {
+a {
     margin: 5px;
     font-family: "Comic Sans MS", sans-serif;
     font-size: 18px;
@@ -20,6 +20,10 @@ button {
     background-color: #efefef;
     color: #1082cc;
     cursor: pointer;
+    text-decoration: none;
+}
+a:visited {
+    color: #1082cc;
 }
 h1 {
     text-align: center;

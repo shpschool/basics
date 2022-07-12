@@ -9,12 +9,9 @@ body {
     font-family: "Comic Sans MS", sans-serif;
 }
 a {
-    margin: 5px;
+    padding: 5px;
     font-family: "Comic Sans MS", sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    width: 150px;
-    min-height: 40px;
+    font-size: large;
     border-radius: 5px;
     border: solid 1px #666;
     background-color: #efefef;

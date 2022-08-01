@@ -83,6 +83,7 @@ const modal = () => {
         modalHeader.textContent = `Игра окончена!`;
         modalText.textContent = `Вы освободили Драка и разрушили ловушку! Спасибо за помощью ребята!`;
         modalImg.classList.remove('hidden');
+        nextBtn.classList.add('hidden');
         wrapModal.classList.remove('hidden');
     };
 };

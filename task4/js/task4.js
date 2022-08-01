@@ -10,7 +10,7 @@ const streightText = document.querySelectorAll('#strenght-text');
 const wrapModal = document.getElementById("wrap-modal");
 const modalImg = document.getElementById("herous");
 const modalText = document.getElementById("modal-h1");
-const nextBtn = document.getElementById('#next-btn')
+const nextBtn = document.getElementById('next-btn');
 
 const getData = async (url, list) => {
     let res = await fetch(url);

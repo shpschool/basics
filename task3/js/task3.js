@@ -2,9 +2,12 @@ const prompt = document.getElementById('prompt');
 const btn = document.getElementById('btn');
 const code = document.getElementById('code');
 
-const wrongAnsw = () => {
-    prompt.innerHTML = `<p>Код неверный. Проверь свою запись и повтори попытку.</p>`
+const getData = async (url, list) => {
+    let res = await fetch(url);
+    res = await res.json();
+    res.forEach(el => list.push(el));
 };
+let prompts = []; getData('db/codes.json', prompts);
 
 const prompt1 = (ctg, src) => {
     prompt.innerHTML = `<h3>Подсказка категории "${ctg}"</h3>
@@ -28,74 +31,36 @@ const prompt3 = (question, src) => {
         <img class="wide-prompt" src="captures/${src}">`;
 };
 
-btn.addEventListener('click', () => {
-    switch (code.value) {
-        case '212361':
-            prompt1('КТО', '212361.jpg');
-            break;
-        case '690108':
-            prompt1('КТО', '690108.png');
-            break;
-        case '645057':
-            prompt1('КТО', '645057.jpg');
-            break;
-        case '963726':
-            prompt1('КТО', '963726.png');
-            break;
-        case '455817':
-            prompt1('ГДЕ', '455817.png');
-            break;
-        case '180858':
-            prompt1('ГДЕ', '180858.jpg');
-            break;
-        case '780126':
-            prompt1('ГДЕ', '780126.jpg');
-            break;
-        case '839846':
-            prompt2('839846.png');
-            break;
-        case '105471':
-            prompt2('105471.png');
-            break;
-        case '482703':
-            prompt2('482703.png');
-            break;
-        case '387672':
-            question = 'КАК преступник украл драгоценные тыквы?';
-            prompt3(question, '387672.png');
-            break;
-        case '484848':
-            question = 'КАК преступник украл драгоценные тыквы?';
-            prompt3(question, '484848.png');
-            break;
-        case '501726':
-            question = 'КТО украл драгоценные тыквы?';
-            prompt3(question, '501726.png');
-            break;
-        case '602140':
-            question = 'ГДЕ преступник спрятал драгоценные тыквы?';
-            prompt3(question, '602140.png');
-            break;
-        case '603034':
-            prompt.innerHTML = `<h3>Анализ ДНК</h3>
+const showPrompt = (code) => {
+    for (let i = 0; i < prompts.length; i++) {
+        el = prompts[i];
+        if (el.code === code) {
+            if (el.ctg === 'КТО' || el.ctg === 'ГДЕ') prompt1(el.ctg, el.src)
+            else if (el.ctg === 'КАК') prompt2(el.src)
+            else if (el.ctg === 'ПРИЗРАК') prompt3(el.question, el.src)
+            else if (el.ctg === 'ДНК') {
+                prompt.innerHTML = `<h3>Анализ ДНК</h3>
                 <p>Для анализа ДНК нужна улика, содержащая частички преступника.
                 Напиши в поле ниже название улики, которую мы нашли при первом осмотре места преступления.</p>
                 <input id="ulika"><button id="btn3">Проверить улику</button>
                 <p id="answer" class="question wide-prompt"></p>`;
-            const ulika = document.getElementById('ulika');
-            const btn3 = document.getElementById('btn3');
-            const answer = document.getElementById('answer');
+                const ulika = document.getElementById('ulika');
+                const btn3 = document.getElementById('btn3');
+                const answer = document.getElementById('answer');
 
-            btn3.addEventListener('click', () => {
-                if (ulika.value.toLowerCase() === "перчатка") {
-                    answer.textContent = 'Преступник обнаружен. Его фамилия Джоватти.';
-                } else {
-                    answer.textContent = "Улика не найдена в базе. Проверь свою запись и повтори попытку."
-                }
-            });
-            break;
-        default:
-            wrongAnsw();
-            break;
+                btn3.addEventListener('click', () => {
+                    if (ulika.value.toLowerCase() === "перчатка") {
+                        answer.textContent = 'Преступник обнаружен. Его фамилия Джоватти.';
+                    } else {
+                        answer.textContent = "Улика не найдена в базе. Проверь свою запись и повтори попытку."
+                    }
+                });
+            };
+            return true;
+        }
     }
-});
+    prompt.innerHTML = `<p>Код неверный. Проверь свою запись и повтори попытку.</p>`
+    return false
+};
+
+btn.addEventListener('click', () => showPrompt(code.value));

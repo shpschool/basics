@@ -71,7 +71,6 @@ input[type="image"] {max-height: 200px;}
 }
 #modal {
     width: 60%;
-    height: 100px;
     border-radius: 15px;
     background-color: #efefef;
     color: #1082cc;

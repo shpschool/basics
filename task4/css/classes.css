@@ -33,6 +33,19 @@
     margin-bottom: 20px;
     width: 25%
 }
+.btn {
+    margin: 5px;
+    font-family: "Comic Sans MS", sans-serif;
+    /* font-size: 16px; */
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    border: solid 1px #666;
+    background-color: #efefef;
+    color: #1082cc;
+    cursor: pointer;
+    /* min-height: 40px; */
+}
 .wrap35 {width: 35%;}
 .wrap60 {width: 60%;}
 .wrap90 {width: 90%;}

@@ -10,6 +10,7 @@ const streightText = document.querySelectorAll('#strenght-text');
 const wrapModal = document.getElementById("wrap-modal");
 const modalImg = document.getElementById("herous");
 const modalText = document.getElementById("modal-h1");
+const nextBtn = document.getElementById('#next-btn')
 
 const getData = async (url, list) => {
     let res = await fetch(url);
@@ -30,16 +31,16 @@ const levels = {
         alt: "Уровень 1. Дракула под замком и в цепях"
     },
     "2" : {
-        maxPower: 70,
-        streight: 1120,
+        maxPower: 50,
+        streight: 600,
         src: "captures/level2.png",
         alt: "Уровень 2. Дракула просто в цепях"
     },
     "3" : {
-        maxPower: 300,
-        streight: 4000,
+        maxPower: 100,
+        streight: 1600,
         src: "captures/level3.png",
-        alt: "Уровень 3. Дракула в магической ловушке"
+        alt: "Уровень 3. Ловушка Ван Хельсинга"
     }
 };
 
@@ -69,12 +70,14 @@ const hideCodes = () => {
 }
 
 const modal = () => {
-    if (level < 3) {
-        modalText.textContent = `Молодцы! Вы прошли ${level} уровень! Продолжаем!`;
+    if (level === 1) {
+        modalText.textContent = `Молодцы! Вы прошли 1 уровень! Но Драк все еще не на свободе! Продолжай бороться с ловушкой Ван Хельсинга!`;
         wrapModal.classList.remove('hidden');
-        setTimeout(() => wrapModal.classList.add('hidden'), 3000);
+    } else if (level === 2) {
+        modalText.textContent = `Молодцы! Вы прошли 2 уровень и освободили Драка! Но пойдете ли вы дальше, на бонусный уровень?..\nРазрушите ли вы ловушку Ван Хельсинга, чтобы в нее больше никто не попал?`;
+        wrapModal.classList.remove('hidden');
     } else {
-        modalText.textContent = `Игра окончена! Вы освободили Драка!`;
+        modalText.textContent = `Игра окончена! Вы освободили Драка и разрушили ловушку! Спасибо за помощью ребята!`;
         modalImg.classList.remove('hidden');
         wrapModal.classList.remove('hidden');
     };
@@ -177,6 +180,8 @@ herous.forEach((el, ind) => {
         if (status !== 1) treatmentError(status);
     });
 });
+
+nextBtn.addEventListener('click', () => wrapModal.classList.add('hidden'));
 
 btn.forEach((butn) => {
     butn.addEventListener('click', () => {

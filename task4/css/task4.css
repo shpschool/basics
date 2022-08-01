@@ -44,18 +44,6 @@ progress {
     border: 1px solid #666;
 }
 input[type="image"] {max-height: 200px;}
-#btn {
-    margin: 5px;
-    font-family: "Comic Sans MS", sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    min-height: 40px;
-    border-radius: 5px;
-    border: solid 1px #666;
-    background-color: #efefef;
-    color: #1082cc;
-    cursor: pointer;
-}
 #main {width: 800px;}
 #start-pc {align-items: flex-start;}
 #start-mobile {display: none;}

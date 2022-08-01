@@ -9,7 +9,8 @@ const obj = document.querySelectorAll('#object');
 const streightText = document.querySelectorAll('#strenght-text');
 const wrapModal = document.getElementById("wrap-modal");
 const modalImg = document.getElementById("herous");
-const modalText = document.getElementById("modal-h1");
+const modalHeader = document.getElementById("modal-h1");
+const modalText = document.getElementById('modal-p');
 const nextBtn = document.getElementById('next-btn');
 
 const getData = async (url, list) => {
@@ -71,13 +72,16 @@ const hideCodes = () => {
 
 const modal = () => {
     if (level === 1) {
-        modalText.textContent = `Молодцы! Вы прошли 1 уровень! Но Драк все еще не на свободе! Продолжай бороться с ловушкой Ван Хельсинга!`;
+        modalHeader.textContent = `Молодцы! Вы прошли 1 уровень!`;
+        modalText.textContent = `Но Драк все еще не на свободе! Продолжай бороться с ловушкой Ван Хельсинга!`;
         wrapModal.classList.remove('hidden');
     } else if (level === 2) {
-        modalText.textContent = `Молодцы! Вы прошли 2 уровень и освободили Драка! Но пойдете ли вы дальше, на бонусный уровень?..\nРазрушите ли вы ловушку Ван Хельсинга, чтобы в нее больше никто не попал?`;
+        modalHeader.textContent = `Молодцы! Вы прошли 2 уровень и освободили Драка!`;
+        modalText.textContent = `Но пойдете ли вы дальше, на бонусный уровень?..\nРазрушите ли вы ловушку Ван Хельсинга, чтобы в нее больше никто не попал?`;
         wrapModal.classList.remove('hidden');
     } else {
-        modalText.textContent = `Игра окончена! Вы освободили Драка и разрушили ловушку! Спасибо за помощью ребята!`;
+        modalHeader.textContent = `Игра окончена!`;
+        modalText.textContent = `Вы освободили Драка и разрушили ловушку! Спасибо за помощью ребята!`;
         modalImg.classList.remove('hidden');
         wrapModal.classList.remove('hidden');
     };

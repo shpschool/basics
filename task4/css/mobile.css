@@ -14,10 +14,6 @@
     #with-power-pc {display: none;}
     #with-power-mobile {display: flex;}
     #object {max-width: 50px;}
-    /* #btn {
-        min-height: 30px;
-        font-size: 14px;
-    } */
     ::-webkit-scrollbar {width: 7px;}
     ::-webkit-scrollbar-track {
         background-color: #1052cc77;

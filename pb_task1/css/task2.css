@@ -37,8 +37,8 @@ body {
 }
 #cover {
     margin: 10px;
-    height: 200px;
-    min-width: 135px;
+    min-width: 80px;
+    width: 120px;
 }
 img {
     margin: 0px 20px;

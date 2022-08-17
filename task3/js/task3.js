@@ -19,7 +19,7 @@ const prompt2 = (src) => {
     prompt.innerHTML = `<h3>Подсказка категории "КАК"</h3>
         <p>Посмотри на картинку и расшифруй анаграмму, чтобы получить подсказку.
         <br><span class="small"><strong>Примечание.</strong> Анаграмма - это новое "слово", полученное путем перестановки букв в исходном слове.
-        <br>Тебе нужно получить иходное слово, чтобы понять подсказку.</span></p>
+        Тебе нужно получить иходное слово, чтобы понять подсказку.</span></p>
         <img class="wide-prompt" src="captures/${src}">`;
 };
 
@@ -42,13 +42,13 @@ const showPrompt = (code) => {
                 prompt.innerHTML = `<h3>Анализ ДНК</h3>
                 <p>Для анализа ДНК нужна улика, содержащая частички преступника.
                 Напиши в поле ниже название улики, которую мы нашли при первом осмотре места преступления.</p>
-                <input id="ulika"><button id="btn3">Проверить улику</button>
+                <input id="ulika" class="input"><button id="btn2" class="btn">Проверить улику</button>
                 <p id="answer" class="question wide-prompt"></p>`;
                 const ulika = document.getElementById('ulika');
-                const btn3 = document.getElementById('btn3');
+                const btn2 = document.getElementById('btn2');
                 const answer = document.getElementById('answer');
 
-                btn3.addEventListener('click', () => {
+                btn2.addEventListener('click', () => {
                     if (ulika.value.toLowerCase() === "перчатка") {
                         answer.textContent = 'Преступник обнаружен. Его фамилия Джоватти.';
                     } else {

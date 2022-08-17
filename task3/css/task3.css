@@ -1,11 +1,11 @@
 body {
     margin: 0px;
     padding: 0px;
-    padding-top: 5%;
     background-color: #212121;
     color: #ff9a00;
     display: flex;
     align-items: center;
+    font-size: large;
 }
 .cont {
     display: flex;
@@ -16,21 +16,24 @@ body {
     font-family: "Comic Sans MS", sans-serif;
 }
 .small {
-    font-size: 16px;
+    font-size: small;
     color: #efefef;
 }
+h1, h2 {
+    width: 100%;
+    text-align: center;
+}
+#title {color: #efefef;}
 #prompt {
-    font-size: 20px;
     text-align: center;
     width: 50%;
     min-width: 300px;
 }
-#btn, #bt2, #btn3 {
+.btn {
     margin: 5px;
     font-family: "Comic Sans MS", sans-serif;
-    font-size: 18px;
-    width: 200px;
-    min-height: 40px;
+    font-size: large;
+    padding: 5px;
     border-radius: 5px;
     border: solid 1px #666;
     background-color: #ff9a00;
@@ -49,13 +52,13 @@ body {
 }
 .question {
     color: #efefef;
-    font-size: 22px;
+    font-size: larger;
 }
-#code, #ulika {
+.input {
     margin: 5px;
     font-family: "Comic Sans MS", sans-serif;
+    font-size: large;
     color: #ff9a00;
-    font-size: 18px;
     width: 200px;
     height: 30px;
     text-align: center;
@@ -87,40 +90,19 @@ body {
     background-color: #41414177;
 }
 
-@media only screen and (max-width: 800px) {
-    .small {
-        font-size: 12px;
-    }
-    #prompt {
-        font-size: 16px;
-    }
-    #btn, #bt2, #btn3 {
-        font-size: 14px;
-        width: 160px;
-        min-height: 30px;
-    }
-    .question {
-        font-size: 18px;
-    }
-    #code, #ulika {
-        font-size: 14px;
+@media (max-width: 800px) {
+    body{font-size: medium;}
+    .input {
         width: 150px;
         height: 25px;
     }
-    #spider {
-        display: none;
-    }
+    #spider {display: none;}
     #pumpkin {
         max-width: 400px;
         width: 50%;
     }
+    .wide-prompt {margin-bottom: 50%;}
     ::-webkit-scrollbar {
         width: 5px;
-    }
-    h1 {
-        font-size: 20px;
-    }
-    .wide-prompt {
-        margin-bottom: 50%;
     }
 }

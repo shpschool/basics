@@ -47,7 +47,7 @@ h1, h2 {
 .wide-prompt {
     width: 50%;
     min-width: 300px;
-    margin-bottom: 70px;
+    margin: 20px 0px 70px;
 }
 .question {
     color: #efefef;

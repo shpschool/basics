@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/pb_task2.css">
+    <title>Квест "Portal"</title>
+</head>
+<body>
+    <div class="cont">
+        <h1>Исследовательский институт перемещений в пространстве</h1>
+        <div id="columns">
+            <div class="cont">
+                <h2>Введи полученный код:</h2>
+                <input id="code" class="input" type="number">
+                <button id="btn" class="btn">Проверить</button>
+                <div id="bonus" class="cont"></div>
+            </div>
+            <div class="cont">
+                <h2>Собери ключ к призу здесь!</h2>
+                <div id="key" class="cont">
+                    <img id="873565" class="piece hidden" src="captures/key1.png" alt="кусочек кода">
+                    <img id="677954" class="piece hidden" src="captures/key2.png" alt="кусочек кода">
+                    <img id="438630" class="piece hidden" src="captures/key3.png" alt="кусочек кода">
+                    <img id="133253" class="piece hidden" src="captures/key4.png" alt="кусочек кода">
+                    <img id="513528" class="piece hidden" src="captures/key5.png" alt="кусочек кода">
+                    <img id="699911" class="piece hidden" src="captures/key6.png" alt="кусочек кода">
+                    <img id="876367" class="piece hidden" src="captures/key7.png" alt="кусочек кода">
+                    <img id="687681" class="piece hidden" src="captures/key8.png" alt="кусочек кода">
+                </div>
+                <div id="next" class="cont hidden">
+                    <p><strong>Поздравляю! Ты собрал ключ к призу!</strong></p>
+                    <p>Теперь, если ты решил максимальное для себя количество уровней и готов получить приз, то введи код с картинки в поле для кода!</p>
+                </div>
+            </div>
+        </div>
+        <div id="finish" class="cont hidden">
+            <h2>Поздравляю с получением приза!</h2>
+            <p>Это мини-игра, в которой черепашки пытаются добратся до портала выхода быстрее другой черепашки.</p>
+            <ul>
+                <li>Чтобы начать играть, нужно нажать на саму игру.</li>
+                <li>Управлять <u>красной</u> черепашкой нужно с помощью <b>стрелок</b>, а <u>синей</u> черепашкой - с помощью букв <b>WSAD</b>.</li>
+                <li><b>Портал выхода</b> находится на маленьком <u>зеленом</u> кружке.</li>
+            </ul>
+            <p>В игре 3 уровня. Ты можешь использовать бонусы ускорения и замедления. Но помни, что они меняются на каждом уровне,
+                и какой черепашке достанется очередной бонус не известно.</p>
+            <div id="prize"></div>
+        </div>
+    </div>
+    <script src="js/pb_task2.js"></script>
+</body>
+</html>

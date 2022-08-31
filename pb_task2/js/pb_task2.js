@@ -37,7 +37,10 @@ const showBonus = (code) => {
 
 const showKey = (code) => {
     let key = document.getElementById(code);
-    if (key) key.classList.remove('hidden')
+    if (key) {
+        key.classList.remove('hidden');
+        bonus.innerHTML = '';
+    }
     else showBonus(code);
     let fullKey = keyBox.querySelector('.hidden');
     if (!fullKey) document.getElementById('next').classList.remove('hidden');

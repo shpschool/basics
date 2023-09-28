@@ -1,3 +1,18 @@
+@font-face {
+    font-family: "Nunito";
+    src: url(/fonts/Nunito.ttf);
+    font-style: normal;
+}
+@font-face {
+    font-family: "Nunito";
+    src: url(/fonts/Nunito-Italic.ttf);
+    font-style: italic;
+}
+/* шрифт */
+* {
+    font-family: "Nunito", Verdana, sans-serif;
+}
+
 body {
     margin: 0px;
     padding: 0px;
@@ -12,7 +27,6 @@ body {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    font-family: "Comic Sans MS", sans-serif;
 }
 .small {
     font-size: small;
@@ -30,7 +44,6 @@ h1, h2, h3 {
 }
 .btn {
     margin: 5px;
-    font-family: "Comic Sans MS", sans-serif;
     font-size: large;
     padding: 5px;
     border-radius: 5px;
@@ -55,7 +68,6 @@ h1, h2, h3 {
 }
 .input {
     margin: 5px;
-    font-family: "Comic Sans MS", sans-serif;
     font-size: large;
     color: #ff9a00;
     width: 200px;

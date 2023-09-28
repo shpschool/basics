@@ -1,3 +1,18 @@
+@font-face {
+    font-family: "Nunito";
+    src: url(/fonts/Nunito.ttf);
+    font-style: normal;
+}
+@font-face {
+    font-family: "Nunito";
+    src: url(/fonts/Nunito-Italic.ttf);
+    font-style: italic;
+}
+/* шрифт */
+* {
+    font-family: "Nunito", Verdana, sans-serif;
+}
+
 body {
     margin: 0px;
     padding: 0px;
@@ -6,7 +21,6 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
     font-size: large;
 }
 h1, h2 {
@@ -20,7 +34,6 @@ p {
 }
 .btn {
     margin: 5px;
-    font-family: 'Montserrat', sans-serif;
     border-radius: 5px;
     padding: 5px;
     border: solid 1px #666;
@@ -32,7 +45,6 @@ p {
 }
 .input {
     margin: 20px 0px 10px;
-    font-family: 'Montserrat', sans-serif;
     border-radius: 3px;
     padding: 5px;
     border: solid 1px #666;

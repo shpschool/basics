@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Nunito";
-    src: url(/fonts/Nunito.ttf);
+    src: url("/fonts/Nunito.ttf");
     font-style: normal;
 }
 @font-face {
     font-family: "Nunito";
-    src: url(/fonts/Nunito-Italic.ttf);
+    src: url("/fonts/Nunito-Italic.ttf");
     font-style: italic;
 }
 /* шрифт */

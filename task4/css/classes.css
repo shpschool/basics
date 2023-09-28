@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+* {
+    font-family: "Nunito", Verdana, sans-serif;
+}
+
 .cont {
     display: flex;
     flex-direction: column;
@@ -12,7 +17,6 @@
 }
 .text {
     margin: 5px;
-    font-family: "Comic Sans MS", sans-serif;
     color: #1082cc;
     background-color: #efefef;
     font-size: 14px;
@@ -35,7 +39,6 @@
 }
 .btn {
     margin: 5px;
-    font-family: "Comic Sans MS", sans-serif;
     font-size: large;
     font-weight: bold;
     padding: 5px;

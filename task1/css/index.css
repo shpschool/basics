@@ -1,14 +1,4 @@
-@font-face {
-    font-family: "Nunito";
-    src: url(/fonts/Nunito.ttf);
-    font-style: normal;
-}
-@font-face {
-    font-family: "Nunito";
-    src: url(/fonts/Nunito-Italic.ttf);
-    font-style: italic;
-}
-/* шрифт */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 * {
     font-family: "Nunito", Verdana, sans-serif;
 }

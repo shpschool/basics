@@ -11,6 +11,7 @@
     <title>Монстрическое приключение</title>
 </head>
 <body>
+     <!-- Модальное окно для бонусного уровня -->
     <div class="cont hidden" id="wrap-modal">
         <div class="cont" id="modal">
             <h1 id="modal-h1"></h1>
@@ -19,13 +20,27 @@
             <button id="next-btn" class="btn">Дальше!</button>
         </div>
     </div>
+    
     <div class="cont" id="main">
         <h1>Монстрическое приключение</h1>
 
-        <!-- Для ПК -->
-        <div class="inline-cont wrap100" id="start-pc">
-            <div class="cont wrap35">
-                <h3>Правила</h3>
+        <div class="inline-cont wrap100" id="main-cont">
+
+            <!-- Левая колонка: правила -->
+            <div class="cont" id="rules">
+                <h3>Правила игры</h3>
+                <ul>
+                    <li>
+                        Чтобы пройти уровень, все из твоей команды должны решить задачи текущей части "Классной работы"
+                        и дать коды капитану. Если ты уже решил свои задачи, то помоги товарищу, но не делай за него – это штрафуется.
+                    </li>
+                    <li>Этот сайт должен быть открыт только у капитана, он и вводит коды.</li>
+                    <li>
+                        Если код не работает, то возможно ты вводишь код со следующей части "Классной работы",
+                        а в твоей команде еще не все добавили коды текущей части "Классной работы".
+                    </li>
+                </ul>
+                <h3>Как пользоваться сайтом?</h3>
                 <ol>
                     <li>Выбери своего героя и нажми на его изображение.</li>
                     <li>Введи в открывшееся поле код, чтобы получить суперсилу или предмет.</li>
@@ -33,87 +48,74 @@
                     <li>Затем нажми на кнопку <b>"Использовать силу/предмет"</b>, чтобы увидеть результат.</li>
                 </ol>
             </div>
-            <div class="cont wrap60">
+
+            <!-- Правая колонка: игровая -->
+            <div class="cont" id="game-cont">
+                
+                <!-- Верхняя часть: общая прочность ловушки (прогресс уровня) + картинка -->
                 <h3>Прочность ловушки: <span id="strenght-text">1000</span></h3>
-                <progress value="1000" max="1000" id="strenght" class="strong wrap90"></progress>
+                <progress value="1000" max="1000" id="strenght" class="strong"></progress>
                 <div class="cont wrap90">
                     <img src="" alt="" id="scene">
                 </div>
-            </div>
-        </div>
 
-        <!-- Для мобилки -->
-        <div class="cont wrap100" id="start-mobile">
-            <div class="cont wrap100">
-                <h3>Правила</h3>
-                <ol>
-                    <li>Выбери своего героя и нажми на его изображение.</li>
-                    <li>Введи в открывшееся поле код, чтобы получить суперсилу или предмет.</li>
-                    <li>После нажми на Enter, чтобы увидеть, сколько мощности в данной силе или данном предмете, а также чтобы прочитать описание.</li>
-                    <li>Затем нажми на кнопку <b>"Использовать силу/предмет"</b>, чтобы увидеть результат.</li>
-                </ol>
-            </div>
-            <div class="cont wrap100">
-                <h3>Прочность ловушки: <span id="strenght-text">1000</span></h3>
-                <progress value="1000" max="1000" id="strenght" class="strong wrap90"></progress>
-                <div class="cont wrap90">
-                    <img src="" alt="" id="scene">
+                <!-- Средняя часть -->
+                <div id="power-object-cont">
+                    
+                    <!-- Описание предметов -->
+                    <div class="wrap60 inline-cont" >
+                        <img id="object" src="" alt="" class="hidden">
+                        <p id="description"></p>
+                    </div>
+
+                    <!-- Мощность предметов и их использование -->
+                    <div class="wrap35 cont">
+                        <div class="inline-cont">
+                            <label>Мощность:</label>
+                            <progress value="0" max="100" id="power"></progress>
+                        </div>
+                        <button id="power-btn" class="btn">Использовать силу/предмет</button>
+                    </div>
+
                 </div>
-            </div>
-        </div>
 
-        <!-- Для ПК -->
-        <div class="inline-cont wrap100" id="with-power-pc">
-            <div class="wrap60 inline-cont" >
-                <img id="object" src="" alt="" class="hidden">
-                <p id="description"></p>
-            </div>
-            <div class="wrap35 cont">
-                <div class="inline-cont">
-                    <label>Мощность:</label>
-                    <progress value="0" max="100" id="power"></progress>
+                <!-- Нижняя часть: герои -->
+                <div class="inline-cont wrap100">
+
+                    <!-- Френки (Франкенштейн) -->
+                    <div class="cont hero">
+                        <p class="name">Френки</p>
+                        <input type="image" src="captures/hero1.png" alt="Френки">
+                        <input type="number" class="text">
+                    </div>
+
+                    <!-- Уэйн (Оборотень) -->
+                    <div class="cont hero">
+                        <p class="name">Уэйн</p>
+                        <input type="image" src="captures/hero2.png" alt="Уэйн">
+                        <input type="number" class="text">
+                    </div>
+
+                    <!-- Мюррей (Мумия) -->
+                    <div class="cont hero">
+                        <p class="name">Мюррей</p>
+                        <input type="image" src="captures/hero3.png" alt="Мюррей">
+                        <input type="number" class="text">
+                    </div>
+
+                    <!-- Гриффин (Человек-невидимка) -->
+                    <div class="cont hero">
+                        <p class="name">Гриффин</p>
+                        <input type="image" src="captures/hero4.png" alt="Гриффин">
+                        <input type="number" class="text">
+                    </div>
+
                 </div>
-                <button id="power-btn" class="btn">Использовать силу/предмет</button>
+
             </div>
+
         </div>
 
-        <!-- Для мобилки -->
-        <div class="cont wrap100" id="with-power-mobile">
-            <div class="wrap90 inline-cont" >
-                <img id="object" src="" alt="" class="hidden">
-                <p id="description"></p>
-            </div>
-            <div class="cont">
-                <div class="inline-cont">
-                    <label>Мощность:</label>
-                    <progress value="0" max="100" id="power"></progress>
-                </div>
-                <button id="power-btn" class="btn">Использовать силу/предмет</button>
-            </div>
-        </div>
-
-        <div class="inline-cont wrap100">
-            <div class="cont hero">
-                <p class="name">Френки</p>
-                <input type="image" src="captures/hero1.png" alt="Френки">
-                <input type="number" class="text">
-            </div>
-            <div class="cont hero">
-                <p class="name">Уэйн</p>
-                <input type="image" src="captures/hero2.png" alt="Уэйн">
-                <input type="number" class="text">
-            </div>
-            <div class="cont hero">
-                <p class="name">Мюррей</p>
-                <input type="image" src="captures/hero3.png" alt="Мюррей">
-                <input type="number" class="text">
-            </div>
-            <div class="cont hero">
-                <p class="name">Гриффин</p>
-                <input type="image" src="captures/hero4.png" alt="Гриффин">
-                <input type="number" class="text">
-            </div>
-        </div>
     </div>
     <script src="js/task4.js"></script>
 </body>

@@ -24,7 +24,7 @@ h3 {
     font-size: 22px;
     margin: 5px;
 }
-ol {
+ol, ul {
     margin: 0px;
     padding: 0px;
     margin-right: -10px;
@@ -48,14 +48,34 @@ progress {
     border: 1px solid #666;
 }
 input[type="image"] {max-height: 200px;}
-#main {width: 800px;}
-#start-pc {align-items: flex-start;}
-#start-mobile {display: none;}
-#with-power-mobile {display: none;}
+#main {width: 85%;}
+#main-cont {
+    align-items: start;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#rules {
+    max-width: 350px;
+    margin-right: 20px;
+    flex: 1;
+}
+#game-cont {
+    flex: 3;
+    margin-left: 20px;
+}
 #power {width: 180px;}
 #description {
     margin-left: 5px;
     font-size: 20px;
+}
+#strenght {width: 50%;}
+#power-object-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 10px;
+    width: 90%;
 }
 #scene {max-height: 200px;}
 #object {max-width: 100px;}

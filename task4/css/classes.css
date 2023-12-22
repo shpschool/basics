@@ -48,8 +48,8 @@
     color: #1082cc;
     cursor: pointer;
 }
-.wrap35 {width: 35%;}
-.wrap60 {width: 60%;}
+.wrap35 {flex: 1;}
+.wrap60 {flex: 2;}
 .wrap90 {width: 90%;}
 .wrap100 {width: 100%;}
 .hidden {display: none;}

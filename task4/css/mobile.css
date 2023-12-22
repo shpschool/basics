@@ -1,5 +1,4 @@
-@media only screen and (max-width: 850px) {
-    #main {width: 90%;}
+@media (max-width: 1024px) {
     h1 {font-size: 26px;}
     h3 {font-size: 18px;}
     ol {font-size: 14px;}
@@ -9,10 +8,21 @@
     .text {font-size: 12px;}
     input[type="image"] {max-height: 150px;}
     #scene {max-height: 180px;}
-    #start-pc {display: none;}
-    #start-mobile {display: flex;}
-    #with-power-pc {display: none;}
-    #with-power-mobile {display: flex;}
+    #strenght {
+        width: 90%;
+        max-width: 600px;
+    }
+    #rules {max-width: 90%;}
+    #main-cont {
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+    }
+    #power-object-cont {
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+    }
     #object {max-width: 50px;}
     ::-webkit-scrollbar {width: 7px;}
     ::-webkit-scrollbar-track {
